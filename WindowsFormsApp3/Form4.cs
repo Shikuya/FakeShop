@@ -21,7 +21,7 @@ namespace WindowsFormsApp3
 			//[0] INPUT: Check Level
 			"SELECT Level \r\n"+
             "FROM tblLogin \r\n"+
-            "WHERE Userid = "+Class.AccountInfo.AccountNo+"; \r\n\r\n",
+            "WHERE Userid = "+ShopApp.Class.AccountInfo.AccountNo+"; \r\n\r\n",
         };
         public Form4()
         {
@@ -35,7 +35,7 @@ namespace WindowsFormsApp3
 
         private void Form4_KeyDown(object sender, KeyEventArgs e)
         { 
-            DataTable dt = SQL.InputSQLMSSQL(SQLDefault[0]);
+            DataTable dt = ShopApp.SQL.InputSQLMSSQL(SQLDefault[0]);
             if (e.KeyCode == Keys.P)
             {
                 if (Convert.ToInt32(dt.Rows[0][0]) >= 1)
@@ -54,7 +54,7 @@ namespace WindowsFormsApp3
 
                 if (Convert.ToInt32(dt.Rows[0][0]) > 2)
                 {
-                    Shop.Mainshop mshop = new Shop.Mainshop();
+                    ShopApp.Shop.Mainshop mshop = new ShopApp.Shop.Mainshop();
                     mshop.Show();
                     this.Hide();
                 }
@@ -71,7 +71,7 @@ namespace WindowsFormsApp3
 
         private void pictureBox1_DoubleClick(object sender, EventArgs e)
         {
-            DataTable dt = SQL.InputSQLMSSQL(SQLDefault[0]);
+            DataTable dt = ShopApp.SQL.InputSQLMSSQL(SQLDefault[0]);
             if (Convert.ToInt32(dt.Rows[0][0]) >= 1)
             {
                 Form1 f1 = new Form1();
@@ -87,10 +87,10 @@ namespace WindowsFormsApp3
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            DataTable dt = SQL.InputSQLMSSQL(SQLDefault[0]);
+            DataTable dt = ShopApp.SQL.InputSQLMSSQL(SQLDefault[0]);
             if (Convert.ToInt32(dt.Rows[0][0]) > 2)
             {
-                Shop.Mainshop mshop = new Shop.Mainshop();
+                ShopApp.Shop.Mainshop mshop = new ShopApp.Shop.Mainshop();
                 mshop.Show();
                 this.Hide();
             }

@@ -73,6 +73,16 @@ namespace ShopApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap confirm_smartphone_phone_checkmark_shipping_box_package_icon_141996 {
+            get {
+                object obj = ResourceManager.GetObject("confirm_smartphone_phone_checkmark_shipping_box_package_icon_141996", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap de09njx_86444c52_a7c2_458d_8356_97158b386b9d {
             get {
                 object obj = ResourceManager.GetObject("de09njx-86444c52-a7c2-458d-8356-97158b386b9d", resourceCulture);
@@ -126,6 +136,16 @@ namespace ShopApp.Properties {
         internal static System.Drawing.Bitmap login1_removebg_preview {
             get {
                 object obj = ResourceManager.GetObject("login1-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap magnifyingglass_23798 {
+            get {
+                object obj = ResourceManager.GetObject("magnifyingglass_23798", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

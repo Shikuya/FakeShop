@@ -1,4 +1,4 @@
-﻿namespace WindowsFormsApp3.Shop
+﻿namespace ShopApp.Shop
 {
     partial class Mainshop
     {
@@ -106,12 +106,14 @@
             this.TSM_1_Customer_edit.Name = "TSM_1_Customer_edit";
             this.TSM_1_Customer_edit.Size = new System.Drawing.Size(180, 22);
             this.TSM_1_Customer_edit.Text = "2 Edit Customer";
+            this.TSM_1_Customer_edit.Click += new System.EventHandler(this.TSM_1_Customer_edit_Click);
             // 
             // TSM_1_Customer_delete
             // 
             this.TSM_1_Customer_delete.Name = "TSM_1_Customer_delete";
             this.TSM_1_Customer_delete.Size = new System.Drawing.Size(180, 22);
             this.TSM_1_Customer_delete.Text = " 3 Delete Customer";
+            this.TSM_1_Customer_delete.Click += new System.EventHandler(this.TSM_1_Customer_delete_Click);
             // 
             // TSM_1_Categorie
             // 
@@ -129,18 +131,21 @@
             this.TSM_1_Categorie_add.Name = "TSM_1_Categorie_add";
             this.TSM_1_Categorie_add.Size = new System.Drawing.Size(180, 22);
             this.TSM_1_Categorie_add.Text = "1 Add Categorie";
+            this.TSM_1_Categorie_add.Click += new System.EventHandler(this.TSM_1_Categorie_add_Click);
             // 
             // TSM_1_Categorie_edit
             // 
             this.TSM_1_Categorie_edit.Name = "TSM_1_Categorie_edit";
             this.TSM_1_Categorie_edit.Size = new System.Drawing.Size(180, 22);
             this.TSM_1_Categorie_edit.Text = "2 Edit Categorie";
+            this.TSM_1_Categorie_edit.Click += new System.EventHandler(this.TSM_1_Categorie_edit_Click);
             // 
             // TSM_1_Categorie_delete
             // 
             this.TSM_1_Categorie_delete.Name = "TSM_1_Categorie_delete";
             this.TSM_1_Categorie_delete.Size = new System.Drawing.Size(180, 22);
             this.TSM_1_Categorie_delete.Text = "3 Delete Categorie";
+            this.TSM_1_Categorie_delete.Click += new System.EventHandler(this.TSM_1_Categorie_delete_Click);
             // 
             // TSM_1_Brand
             // 
@@ -157,18 +162,21 @@
             this.TSM_1_brand_add.Name = "TSM_1_brand_add";
             this.TSM_1_brand_add.Size = new System.Drawing.Size(180, 22);
             this.TSM_1_brand_add.Text = "1 Add Brand";
+            this.TSM_1_brand_add.Click += new System.EventHandler(this.TSM_1_brand_add_Click);
             // 
             // TSM_1_brand_edit
             // 
             this.TSM_1_brand_edit.Name = "TSM_1_brand_edit";
             this.TSM_1_brand_edit.Size = new System.Drawing.Size(180, 22);
             this.TSM_1_brand_edit.Text = "2 Edit Brand";
+            this.TSM_1_brand_edit.Click += new System.EventHandler(this.TSM_1_brand_edit_Click);
             // 
             // TSM_1_brand_delete
             // 
             this.TSM_1_brand_delete.Name = "TSM_1_brand_delete";
             this.TSM_1_brand_delete.Size = new System.Drawing.Size(180, 22);
             this.TSM_1_brand_delete.Text = "3 Delete Brand";
+            this.TSM_1_brand_delete.Click += new System.EventHandler(this.TSM_1_brand_delete_Click);
             // 
             // TSM_1_Product
             // 
@@ -185,19 +193,21 @@
             this.TSM_1_product_add.Name = "TSM_1_product_add";
             this.TSM_1_product_add.Size = new System.Drawing.Size(180, 22);
             this.TSM_1_product_add.Text = "1 Add Product";
-            this.TSM_1_product_add.Click += new System.EventHandler(this.เพมToolStripMenuItem3_Click);
+            this.TSM_1_product_add.Click += new System.EventHandler(this.TSM_1_product_add_Click);
             // 
             // TSM_1_product_edit
             // 
             this.TSM_1_product_edit.Name = "TSM_1_product_edit";
             this.TSM_1_product_edit.Size = new System.Drawing.Size(180, 22);
             this.TSM_1_product_edit.Text = "2 Edit Product";
+            this.TSM_1_product_edit.Click += new System.EventHandler(this.TSM_1_product_edit_Click);
             // 
             // TSM_1_product_delete
             // 
             this.TSM_1_product_delete.Name = "TSM_1_product_delete";
             this.TSM_1_product_delete.Size = new System.Drawing.Size(180, 22);
             this.TSM_1_product_delete.Text = "3 Delete Product";
+            this.TSM_1_product_delete.Click += new System.EventHandler(this.TSM_1_product_delete_Click);
             // 
             // TSM_1_Transport
             // 
@@ -214,18 +224,21 @@
             this.TSM_1_transport_add.Name = "TSM_1_transport_add";
             this.TSM_1_transport_add.Size = new System.Drawing.Size(180, 22);
             this.TSM_1_transport_add.Text = "1 Add Trransport";
+            this.TSM_1_transport_add.Click += new System.EventHandler(this.TSM_1_transport_add_Click);
             // 
             // TSM_1_transport_edit
             // 
             this.TSM_1_transport_edit.Name = "TSM_1_transport_edit";
             this.TSM_1_transport_edit.Size = new System.Drawing.Size(180, 22);
             this.TSM_1_transport_edit.Text = "2 Edit Trransport";
+            this.TSM_1_transport_edit.Click += new System.EventHandler(this.TSM_1_transport_edit_Click);
             // 
             // TSM_1_transport_delete
             // 
             this.TSM_1_transport_delete.Name = "TSM_1_transport_delete";
             this.TSM_1_transport_delete.Size = new System.Drawing.Size(180, 22);
             this.TSM_1_transport_delete.Text = "3 Delete Trransport";
+            this.TSM_1_transport_delete.Click += new System.EventHandler(this.TSM_1_transport_delete_Click);
             // 
             // TSM_1_event
             // 
@@ -242,18 +255,21 @@
             this.TSM_1_event_add.Name = "TSM_1_event_add";
             this.TSM_1_event_add.Size = new System.Drawing.Size(180, 22);
             this.TSM_1_event_add.Text = "1 Add EventSale";
+            this.TSM_1_event_add.Click += new System.EventHandler(this.TSM_1_event_add_Click);
             // 
             // TSM_1_event_edit
             // 
             this.TSM_1_event_edit.Name = "TSM_1_event_edit";
             this.TSM_1_event_edit.Size = new System.Drawing.Size(180, 22);
             this.TSM_1_event_edit.Text = "2 Edit EventSale";
+            this.TSM_1_event_edit.Click += new System.EventHandler(this.TSM_1_event_edit_Click);
             // 
             // TSM_1_event_delete
             // 
             this.TSM_1_event_delete.Name = "TSM_1_event_delete";
             this.TSM_1_event_delete.Size = new System.Drawing.Size(180, 22);
             this.TSM_1_event_delete.Text = "3 Delete EventSale";
+            this.TSM_1_event_delete.Click += new System.EventHandler(this.TSM_1_event_delete_Click);
             // 
             // optionToolStripMenuItem1
             // 
@@ -267,13 +283,13 @@
             // TSM_2_CheckStock
             // 
             this.TSM_2_CheckStock.Name = "TSM_2_CheckStock";
-            this.TSM_2_CheckStock.Size = new System.Drawing.Size(180, 22);
+            this.TSM_2_CheckStock.Size = new System.Drawing.Size(145, 22);
             this.TSM_2_CheckStock.Text = "Check Stock";
             // 
             // TSM_2_HistoryOrder
             // 
             this.TSM_2_HistoryOrder.Name = "TSM_2_HistoryOrder";
-            this.TSM_2_HistoryOrder.Size = new System.Drawing.Size(180, 22);
+            this.TSM_2_HistoryOrder.Size = new System.Drawing.Size(145, 22);
             this.TSM_2_HistoryOrder.Text = "History Order";
             // 
             // Mainshop
@@ -282,6 +298,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.menuStrip1);
+            this.IsMdiContainer = true;
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(816, 489);
+            this.MinimizeBox = false;
             this.Name = "Mainshop";
             this.Text = "Mainshop";
             this.menuStrip1.ResumeLayout(false);

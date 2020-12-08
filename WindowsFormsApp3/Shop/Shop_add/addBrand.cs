@@ -16,5 +16,26 @@ namespace ShopApp.Shop.add
         {
             InitializeComponent();
         }
+
+        private void B_add_brand_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CBCategorie_Add_Brand_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (TBBrand_Add_Brand.Text == "")
+            {
+                MessageBox.Show("กรุณากรอกข้อมูลให้ครบครับ");
+            }
+            else
+            {
+            ShopApp.SQL.InputSQLMSSQL("INSERT INTO tblBrand(Brandname) \r\n"+
+            "VALUES('"+TBBrand_Add_Brand.Text+"'); ");
+                MessageBox.Show("เพิ่ม Brand เรียบร้อยแล้วครับ");
+                TBBrand_Add_Brand.Text = "";
+            }
+
+        }
     }
 }

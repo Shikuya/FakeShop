@@ -147,6 +147,7 @@
             this.ClientSize = new System.Drawing.Size(736, 390);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox1);
+            this.MaximizeBox = false;
             this.Name = "Form3";
             this.Text = "Form3";
             this.groupBox1.ResumeLayout(false);

@@ -118,43 +118,49 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="flatworldmap_118410" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\flatworldmap_118410.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="e25c43c6a65bdca84c72f0c58524fcd6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\e25c43c6a65bdca84c72f0c58524fcd6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="register-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\register-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="de09njx-86444c52-a7c2-458d-8356-97158b386b9d" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\de09njx-86444c52-a7c2-458d-8356-97158b386b9d.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="katana-anime-girl-neon-4k-9s-1440x900" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\katana-anime-girl-neon-4k-9s-1440x900.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="vector-forest-sunset-forest-sunset-forest-wallpaper-thumb" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\vector-forest-sunset-forest-sunset-forest-wallpaper-thumb.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="shop-icon_34368" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\shop-icon_34368.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="back_arrow_14447" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\back_arrow_14447.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="login1-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\login1-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="wp2754864" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\wp2754864.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="e25c43c6a65bdca84c72f0c58524fcd6" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\e25c43c6a65bdca84c72f0c58524fcd6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="login" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\login.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tgyrdrt" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tgyrdrt.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="katana-anime-girl-neon-4k-9s-1440x900" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\katana-anime-girl-neon-4k-9s-1440x900.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="systemshutdown_104277" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\systemshutdown_104277.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="back_arrow_14447" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\back_arrow_14447.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="magnifyingglass_23798" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\magnifyingglass_23798.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="register-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\register-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flatworldmap_118410" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\flatworldmap_118410.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="shop-icon_34368" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\shop-icon_34368.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="de09njx-86444c52-a7c2-458d-8356-97158b386b9d" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\de09njx-86444c52-a7c2-458d-8356-97158b386b9d.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="vector-forest-sunset-forest-sunset-forest-wallpaper-thumb" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\vector-forest-sunset-forest-sunset-forest-wallpaper-thumb.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tgyrdrt" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tgyrdrt.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="wp2754864" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wp2754864.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="login" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\login.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="confirm_smartphone_phone_checkmark_shipping_box_package_icon_141996" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\confirm_smartphone_phone_checkmark_shipping_box_package_icon_141996.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

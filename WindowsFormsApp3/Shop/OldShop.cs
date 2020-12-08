@@ -174,7 +174,7 @@ namespace WindowsFormsApp3.Shop
         private void button2_Click(object sender, EventArgs e)
         {
             //ปุ่มใน Add Brand
-            Class.ComboBoxItem brandid = (CBNameBrand.SelectedItem as Class.ComboBoxItem);
+            ShopApp.Class.ComboBoxItem brandid = (CBNameBrand.SelectedItem as ShopApp.Class.ComboBoxItem);
             if (RBAdd.Checked == true)
             {
                 if (TBbrand_add__brand.Text == "")
@@ -195,7 +195,7 @@ namespace WindowsFormsApp3.Shop
                 }
                 else
                 {
-                    SQL.InputSQLMSSQL("DELETE FROM tblBrand \r\n" +
+                    ShopApp.SQL.InputSQLMSSQL("DELETE FROM tblBrand \r\n" +
                     "WHERE BrandID = " + brandid.No + " ; \r\n\r\n");
                     MessageBox.Show("ลบแแบรนเรียบร้อยจร้า");
                     Cleartex();
@@ -206,7 +206,7 @@ namespace WindowsFormsApp3.Shop
 
         private void InputBrand()
         {
-            SQL.InputSQLMSSQL("INSERT INTO tblbrand(brandname) \r\n" +
+            ShopApp.SQL.InputSQLMSSQL("INSERT INTO tblbrand(brandname) \r\n" +
             "VALUES ('" + TBbrand_add__brand.Text + "'); \r\n\r\n" +
             "SELECT Scope()");
             MessageBox.Show("เพิ่มแบรนเสร็จเรียบร้อย.");
@@ -248,26 +248,26 @@ namespace WindowsFormsApp3.Shop
 
         private void Re()
         {
-            SQL.LoadComboBoxInformation("SELECT BrandName, Brandid \r\n" +
+            ShopApp.SQL.LoadComboBoxInformation("SELECT BrandName, Brandid \r\n" +
             "FROM tblBrand; \r\n\r\n", new ComboBox[] { CBNameBrand, CBBrandNameproduct, CBTBrandname, CBstockBrandname, CBbra, CBOBRAND });
-            SQL.LoadComboBoxInformation("SELECT EventSalename , EventSaleID  \r\n" +
+            ShopApp.SQL.LoadComboBoxInformation("SELECT EventSalename , EventSaleID  \r\n" +
             "FROM tblEventSale ; \r\n\r\n", new ComboBox[] { CBNAMEVENT, CBnameeventlist, CBTCODE, CBOevnet });
-            SQL.LoadComboBoxInformation("SELECT Transportname , TransportID  \r\n" +
+            ShopApp.SQL.LoadComboBoxInformation("SELECT Transportname , TransportID  \r\n" +
             "FROM tbltransport ; \r\n\r\n", new ComboBox[] { CBnametran, CBOTransport });
-            SQL.LoadComboBoxInformation("SELECT Customername , CustomerID  \r\n" +
+            ShopApp.SQL.LoadComboBoxInformation("SELECT Customername , CustomerID  \r\n" +
             "FROM tblCustomers ; \r\n\r\n", new ComboBox[] { CBCustomer, CBOCustomer });
-
+            
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Class.ComboBoxItem dd = (CBNameBrand.SelectedItem as Class.ComboBoxItem);
+            ShopApp.Class.ComboBoxItem dd = (CBNameBrand.SelectedItem as ShopApp.Class.ComboBoxItem);
             CBNameCategorie.Items.Clear();
             if (RBDelete.Checked == true)
             {
                 for (int a = 0; a < dd.No.Length; a++)
                 {
-                    SQL.LoadComboBoxInformation("SELECT Categoriename , CategorieID  \r\n" +
+                    ShopApp.SQL.LoadComboBoxInformation("SELECT Categoriename , CategorieID  \r\n" +
                 "FROM tblCategories as a \r\n" +
                 "LEFT JOIN tblBrand as b on a.BrandID = b.BrandID \r\n" +
                 "WHERE b.BrandID = " + dd.No + "; \r\n\r\n", new ComboBox[] { CBNameCategorie });
@@ -352,8 +352,8 @@ namespace WindowsFormsApp3.Shop
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Class.ComboBoxItem addbrandid = (CBBrandNameproduct.SelectedItem as Class.ComboBoxItem);
-            Class.ComboBoxItem addcategorieid = (CBcategorieProduct.SelectedItem as Class.ComboBoxItem);
+            ShopApp.Class.ComboBoxItem addbrandid = (CBBrandNameproduct.SelectedItem as ShopApp.Class.ComboBoxItem);
+            ShopApp.Class.ComboBoxItem addcategorieid = (CBcategorieProduct.SelectedItem as ShopApp.Class.ComboBoxItem);
             if (RBAdd.Checked == true)
             {
                 if (CBBrandNameproduct.Text == "" || CBcategorieProduct.Text == "" || TBProductName.Text == "" || TBCostProduct.Text == "" || TBSellProduct.Text == "")
@@ -362,12 +362,12 @@ namespace WindowsFormsApp3.Shop
                 }
                 else
                 {
-                    SQL.InputSQLMSSQL(//[] INPUT: 
+                    ShopApp.SQL.InputSQLMSSQL(//[] INPUT: 
                     "DECLARE @ProductID INT; \r\n" +
                     "DECLARE @PriceID INT; \r\n \r\n" +
 
                     "INSERT INTO tblPrice(CostPrice , PriceSell , UserID) \r\n" +
-                    "VALUES ('" + TBCostProduct.Text + "','" + TBSellProduct.Text + "','" + Class.AccountInfo.AccountNo + "'); \r\n \r\n" +
+                    "VALUES ('" + TBCostProduct.Text + "','" + TBSellProduct.Text + "','" + ShopApp.Class.AccountInfo.AccountNo + "'); \r\n \r\n" +
 
                     "SELECT @PriceID = SCOPE_IDENTITY(); \r\n  \r\n" +
 
@@ -402,8 +402,8 @@ namespace WindowsFormsApp3.Shop
 
         private void BCategorie_Click(object sender, EventArgs e)
         {
-            Class.ComboBoxItem ad = (CBNameBrand.SelectedItem as Class.ComboBoxItem);
-            Class.ComboBoxItem de = (CBNameCategorie.SelectedItem as Class.ComboBoxItem);
+            ShopApp.Class.ComboBoxItem ad = (CBNameBrand.SelectedItem as ShopApp.Class.ComboBoxItem);
+            ShopApp.Class.ComboBoxItem de = (CBNameCategorie.SelectedItem as ShopApp.Class.ComboBoxItem);
             if (RBAdd.Checked == true)
             {
                 if (TBNameCategorie.Text == "" || CBNameBrand.Text == "")
@@ -412,7 +412,7 @@ namespace WindowsFormsApp3.Shop
                 }
                 else
                 {
-                    SQL.InputSQLMSSQL("INSERT INTO tblCategories(Categoriename , BrandID ,ShortDesciption) \r\n" +
+                    ShopApp.SQL.InputSQLMSSQL("INSERT INTO tblCategories(Categoriename , BrandID ,ShortDesciption) \r\n" +
                     "VALUES ('" + TBNameCategorie.Text + "'," + ad.No + ",'" + TBcategorieDesciption.Text + "'); \r\n\r\n");
                     MessageBox.Show("เพิ่มเสร็จเรียบร้อย.");
                     Cleartex();
@@ -428,7 +428,7 @@ namespace WindowsFormsApp3.Shop
                 }
                 else
                 {
-                    SQL.InputSQLMSSQL("DELETE FROM tblCategories \r\n" +
+                    ShopApp.SQL.InputSQLMSSQL("DELETE FROM tblCategories \r\n" +
                 "WHERE CategorieID = " + de.No + "; \r\n\r\n");
                     MessageBox.Show("ลบเสร็จเรียบร้อย.");
                     Cleartex();
@@ -439,11 +439,11 @@ namespace WindowsFormsApp3.Shop
 
         private void CBBrandNameproduct_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Class.ComboBoxItem dd = (CBBrandNameproduct.SelectedItem as Class.ComboBoxItem);
+            ShopApp.Class.ComboBoxItem dd = (CBBrandNameproduct.SelectedItem as ShopApp.Class.ComboBoxItem);
             CBcategorieProduct.Items.Clear();
             for (int a = 0; a < dd.No.Length; a++)
             {
-                SQL.LoadComboBoxInformation("SELECT Categoriename , CategorieID  \r\n" +
+                ShopApp.SQL.LoadComboBoxInformation("SELECT Categoriename , CategorieID  \r\n" +
             "FROM tblCategories as a \r\n" +
             "LEFT JOIN tblBrand as b on a.BrandID = b.BrandID \r\n" +
             "WHERE b.BrandID = " + dd.No + "; \r\n\r\n", new ComboBox[] { CBcategorieProduct });
@@ -452,11 +452,11 @@ namespace WindowsFormsApp3.Shop
 
         private void CBcategorieProduct_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Class.ComboBoxItem dd = (CBcategorieProduct.SelectedItem as Class.ComboBoxItem);
+            ShopApp.Class.ComboBoxItem dd = (CBcategorieProduct.SelectedItem as ShopApp.Class.ComboBoxItem);
             CBProduct.Items.Clear();
             for (int a = 0; a < dd.No.Length; a++)
             {
-                SQL.LoadComboBoxInformation("SELECT Productname , ProductID  \r\n" +
+                ShopApp.SQL.LoadComboBoxInformation("SELECT Productname , ProductID  \r\n" +
                 "FROM tblProducts as a \r\n" +
                 "LEFT JOIN tblCategories as b on a.categorieid = b.categorieid \r\n" +
                 "WHERE b.categorieid = " + dd.No + "; \r\n\r\n", new ComboBox[] { CBProduct });
@@ -474,7 +474,7 @@ namespace WindowsFormsApp3.Shop
                 }
                 else
                 {
-                    SQL.InputSQLMSSQL("INSERT INTO tblEventSale(Discountpercen , Description ,EventSalename) \r\n" +
+                    ShopApp.SQL.InputSQLMSSQL("INSERT INTO tblEventSale(Discountpercen , Description ,EventSalename) \r\n" +
                     "VALUES('" + TBSalePer.Text + "','" + TBdescliptionEvent.Text + "','" + TBNameEvent.Text + "'); \r\n\r\n");
                     MessageBox.Show("เพิ่มอีเว้นลดราคาเรียบร้อยแล้วจ้า.");
                     Cleartex();
@@ -496,8 +496,8 @@ namespace WindowsFormsApp3.Shop
 
         private void CBnameeventlist_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Class.ComboBoxItem dd = (CBnameeventlist.SelectedItem as Class.ComboBoxItem);
-            DataTable dt = SQL.InputSQLMSSQL("SELECT EVENTSALENAME , Discountpercen , Description  \r\n" +
+            ShopApp.Class.ComboBoxItem dd = (CBnameeventlist.SelectedItem as ShopApp.Class.ComboBoxItem);
+            DataTable dt = ShopApp.SQL.InputSQLMSSQL("SELECT EVENTSALENAME , Discountpercen , Description  \r\n" +
             "FROM  tblEventSale \r\n" +
             "WHERE EventSaleID = " + dd.No + "; \r\n\r\n");
             TBConsolenameevent.Text = "Name Event is " + dt.Rows[0][0] + ". \r\n" +
@@ -507,7 +507,7 @@ namespace WindowsFormsApp3.Shop
 
         private void BTransport_Click(object sender, EventArgs e)
         {
-            Class.ComboBoxItem tranid = (CBnametran.SelectedItem as Class.ComboBoxItem);
+            ShopApp.Class.ComboBoxItem tranid = (CBnametran.SelectedItem as ShopApp.Class.ComboBoxItem);
             if (RBAdd.Checked == true)
             {
                 if (TBnameTran.Text == "")
@@ -516,7 +516,7 @@ namespace WindowsFormsApp3.Shop
                 }
                 else
                 {
-                    SQL.InputSQLMSSQL("INSERT INTO tblTransport(Transportname , TransportDetail) \r\n" +
+                    ShopApp.SQL.InputSQLMSSQL("INSERT INTO tblTransport(Transportname , TransportDetail) \r\n" +
                     "VALUES ('" + TBnameTran.Text + "','" + TBtransportDetail.Text + "'); \r\n\r\n");
                     MessageBox.Show("เพิ่มขนส่งเรียบร้อย.");
                     Cleartex();
@@ -530,7 +530,7 @@ namespace WindowsFormsApp3.Shop
                 }
                 else
                 {
-                    SQL.InputSQLMSSQL("DELETE FROM tblTransport \r\n" +
+                    ShopApp.SQL.InputSQLMSSQL("DELETE FROM tblTransport \r\n" +
             "WHERE TransportID = " + tranid.No + " ; \r\n\r\n");
                     MessageBox.Show("ลบขนส่งนั้นเรียบร้อย");
                     Cleartex();
@@ -544,8 +544,8 @@ namespace WindowsFormsApp3.Shop
             CBstockCategorie.Items.Clear();
             CBstockProduct.Items.Clear();
             TBConsoleStock.Text = "";
-            Class.ComboBoxItem BrandID = (CBstockBrandname.SelectedItem as Class.ComboBoxItem);
-            SQL.LoadComboBoxInformation("SELECT Categoriename , Categorieid  \r\n" +
+            ShopApp.Class.ComboBoxItem BrandID = (CBstockBrandname.SelectedItem as ShopApp.Class.ComboBoxItem);
+            ShopApp.SQL.LoadComboBoxInformation("SELECT Categoriename , Categorieid  \r\n" +
             "FROM tblCategories as a \r\n" +
             "LEFT JOIN tblbrand as b on a.BrandID = b.BrandID \r\n" +
             "WHERE a.BrandID = " + BrandID.No + " ; \r\n\r\n", new ComboBox[] { CBstockCategorie });
@@ -554,8 +554,8 @@ namespace WindowsFormsApp3.Shop
         private void CBstockCategorie_SelectedIndexChanged(object sender, EventArgs e)
         {
             CBstockProduct.Items.Clear();
-            Class.ComboBoxItem CategorisID = (CBstockCategorie.SelectedItem as Class.ComboBoxItem);
-            SQL.LoadComboBoxInformation("SELECT Productname , Productid  \r\n" +
+            ShopApp.Class.ComboBoxItem CategorisID = (CBstockCategorie.SelectedItem as ShopApp.Class.ComboBoxItem);
+            ShopApp.SQL.LoadComboBoxInformation("SELECT Productname , Productid  \r\n" +
             "FROM tblProducts as a \r\n" +
             "LEFT JOIN tblCategories as b on a.CategorieID = b.CategorieID \r\n" +
             "WHERE a.CategorieID = " + CategorisID.No + " ; \r\n\r\n", new ComboBox[] { CBstockProduct });
@@ -563,8 +563,8 @@ namespace WindowsFormsApp3.Shop
 
         private void CBstockProduct_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Class.ComboBoxItem idproduct = (CBstockProduct.SelectedItem as Class.ComboBoxItem);
-            DataTable dt = SQL.InputSQLMSSQL("SELECT Productname , Quantity , PriceSell \r\n" +
+            ShopApp.Class.ComboBoxItem idproduct = (CBstockProduct.SelectedItem as ShopApp.Class.ComboBoxItem);
+            DataTable dt = ShopApp.SQL.InputSQLMSSQL("SELECT Productname , Quantity , PriceSell \r\n" +
             "FROM tblProducts as a \r\n" +
             "LEFT JOIN tblStock as b on a.ProductID = b.ProductID \r\n" +
             "LEFT JOIN tblPrice as c on a.PriceID = c.PriceID  \r\n" +
@@ -584,7 +584,7 @@ namespace WindowsFormsApp3.Shop
                 }
                 else
                 {
-                    SQL.InputSQLMSSQL(//[] INPUT: 
+                    ShopApp.SQL.InputSQLMSSQL(//[] INPUT: 
                     "INSERT INTO tblCustomers(Customername , IDcardnum , Address , PhoneNumber) \r\n" +
                     "VALUES ('" + TBnamecustomer.Text + "','" + TBIDCARD.Text + "','" + TBADDRESS.Text + "','" + TBPHONENUM.Text + "'); \r\n\r\n");
                     MessageBox.Show("เพิ่มข้อมูลเรียบร้อยแล้วครับ");
@@ -601,8 +601,8 @@ namespace WindowsFormsApp3.Shop
                 }
                 else
                 {
-                    Class.ComboBoxItem idcustomer = (CBCustomer.SelectedItem as Class.ComboBoxItem);
-                    SQL.InputSQLMSSQL(
+                    ShopApp.Class.ComboBoxItem idcustomer = (CBCustomer.SelectedItem as ShopApp.Class.ComboBoxItem);
+                    ShopApp.SQL.InputSQLMSSQL(
                     "DELETE FROM tblCustomers \r\n" +
                     "WHERE CustomerID = " + idcustomer.No + "; \r\n\r\n");
                     MessageBox.Show("ลบผู้ใช้เรียบร้อยแล้ว");
@@ -629,13 +629,13 @@ namespace WindowsFormsApp3.Shop
 
         private void CBTBrandname_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Class.ComboBoxItem dd = (CBTBrandname.SelectedItem as Class.ComboBoxItem);
+            ShopApp.Class.ComboBoxItem dd = (CBTBrandname.SelectedItem as ShopApp.Class.ComboBoxItem);
             CBTcategoriename.Items.Clear();
             if (RBTESTCODE.Checked == true)
             {
                 for (int a = 0; a < dd.No.Length; a++)
                 {
-                    SQL.LoadComboBoxInformation("SELECT Categoriename , CategorieID  \r\n" +
+                    ShopApp.SQL.LoadComboBoxInformation("SELECT Categoriename , CategorieID  \r\n" +
                     "FROM tblCategories as a \r\n" +
                     "LEFT JOIN tblBrand as b on a.BrandID = b.BrandID \r\n" +
                     "WHERE b.BrandID = " + dd.No + "; \r\n\r\n", new ComboBox[] { CBTcategoriename });
@@ -645,11 +645,11 @@ namespace WindowsFormsApp3.Shop
 
         private void CBTcategoriename_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Class.ComboBoxItem dd = (CBTcategoriename.SelectedItem as Class.ComboBoxItem);
+            ShopApp.Class.ComboBoxItem dd = (CBTcategoriename.SelectedItem as ShopApp.Class.ComboBoxItem);
             CBTproductname.Items.Clear();
             for (int a = 0; a < dd.No.Length; a++)
             {
-                SQL.LoadComboBoxInformation("SELECT Productname , ProductID  \r\n" +
+                ShopApp.SQL.LoadComboBoxInformation("SELECT Productname , ProductID  \r\n" +
             "FROM tblProducts as a \r\n" +
             "LEFT JOIN tblCategories as b on a.categorieid = b.categorieid \r\n" +
             "WHERE b.categorieid = " + dd.No + "; \r\n\r\n", new ComboBox[] { CBTproductname });
@@ -664,9 +664,9 @@ namespace WindowsFormsApp3.Shop
             }
             else
             {
-                Class.ComboBoxItem idproduct = (CBTproductname.SelectedItem as Class.ComboBoxItem);
-                Class.ComboBoxItem idevent = (CBTCODE.SelectedItem as Class.ComboBoxItem);
-                DataSet ds = SQL.InputSQLMSSQLDS(//[] INPUT: 
+                ShopApp.Class.ComboBoxItem idproduct = (CBTproductname.SelectedItem as ShopApp.Class.ComboBoxItem);
+                ShopApp.Class.ComboBoxItem idevent = (CBTCODE.SelectedItem as ShopApp.Class.ComboBoxItem);
+                DataSet ds = ShopApp.SQL.InputSQLMSSQLDS(//[] INPUT: 
                 "SELECT Productname , Quantity , PriceSell  \r\n" +
                 "FROM tblProducts as a  \r\n" +
                 "LEFT JOIN tblStock as b on a.ProductID = b.ProductID  \r\n" +
@@ -708,13 +708,13 @@ namespace WindowsFormsApp3.Shop
 
         private void CBOBRAND_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Class.ComboBoxItem dd = (CBOBRAND.SelectedItem as Class.ComboBoxItem);
+            ShopApp.Class.ComboBoxItem dd = (CBOBRAND.SelectedItem as ShopApp.Class.ComboBoxItem);
             CBOCATEGORIE.Items.Clear();
             if (RBOrder.Checked == true)
             {
                 for (int a = 0; a < dd.No.Length; a++)
                 {
-                    SQL.LoadComboBoxInformation("SELECT Categoriename , CategorieID  \r\n" +
+                    ShopApp.SQL.LoadComboBoxInformation("SELECT Categoriename , CategorieID  \r\n" +
                 "FROM tblCategories as a \r\n" +
                 "LEFT JOIN tblBrand as b on a.BrandID = b.BrandID \r\n" +
                 "WHERE b.BrandID = " + dd.No + "; \r\n\r\n", new ComboBox[] { CBOCATEGORIE });
@@ -725,8 +725,8 @@ namespace WindowsFormsApp3.Shop
         private void CBOCATEGORIE_SelectedIndexChanged(object sender, EventArgs e)
         {
             CBOProduct.Items.Clear();
-            Class.ComboBoxItem CategorisID = (CBOCATEGORIE.SelectedItem as Class.ComboBoxItem);
-            SQL.LoadComboBoxInformation("SELECT Productname , Productid  \r\n" +
+            ShopApp.Class.ComboBoxItem CategorisID = (CBOCATEGORIE.SelectedItem as ShopApp.Class.ComboBoxItem);
+            ShopApp.SQL.LoadComboBoxInformation("SELECT Productname , Productid  \r\n" +
             "FROM tblProducts as a \r\n" +
             "LEFT JOIN tblCategories as b on a.CategorieID = b.CategorieID \r\n" +
             "WHERE a.CategorieID = " + CategorisID.No + " ; \r\n\r\n", new ComboBox[] { CBOProduct });
@@ -735,8 +735,8 @@ namespace WindowsFormsApp3.Shop
         private void CBOProduct_SelectedIndexChanged(object sender, EventArgs e)
         {
             CBOquantity.Items.Clear();
-            Class.ComboBoxItem count = (CBOProduct.SelectedItem as Class.ComboBoxItem);
-            DataTable dt = SQL.InputSQLMSSQL("SELECT Quantity \r\n" +
+            ShopApp.Class.ComboBoxItem count = (CBOProduct.SelectedItem as ShopApp.Class.ComboBoxItem);
+            DataTable dt = ShopApp.SQL.InputSQLMSSQL("SELECT Quantity \r\n" +
             "FROM tblProducts as a \r\n" +
             "LEFT JOIN tblStock as b on a.ProductID = b.ProductID \r\n" +
             "WHERE a.ProductID = " + count.No + "; \r\n\r\n");
@@ -748,11 +748,11 @@ namespace WindowsFormsApp3.Shop
 
         private void CBOquantity_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Class.ComboBoxItem product = (CBOProduct.SelectedItem as Class.ComboBoxItem);
-            Class.ComboBoxItem idevent = (CBOevnet.SelectedItem as Class.ComboBoxItem);
+            ShopApp.Class.ComboBoxItem product = (CBOProduct.SelectedItem as ShopApp.Class.ComboBoxItem);
+            ShopApp.Class.ComboBoxItem idevent = (CBOevnet.SelectedItem as ShopApp.Class.ComboBoxItem);
             if (CBOevnet.Text == "")
             {
-                DataTable dt = SQL.InputSQLMSSQL("SELECT PriceSell \r\n" +
+                DataTable dt = ShopApp.SQL.InputSQLMSSQL("SELECT PriceSell \r\n" +
                 "FROM tblPrice as a \r\n" +
                 "LEFT JOIN tblProducts as b on a.PriceID = b.PriceID \r\n" +
                 "WHERE ProductID = " + product.No + ";");
@@ -760,7 +760,7 @@ namespace WindowsFormsApp3.Shop
             }
             else
             {
-                DataSet ds = SQL.InputSQLMSSQLDS("SELECT PriceSell \r\n" +
+                DataSet ds = ShopApp.SQL.InputSQLMSSQLDS("SELECT PriceSell \r\n" +
                 "FROM tblPrice as a \r\n" +
                 "LEFT JOIN tblProducts as b on a.PriceID = b.PriceID \r\n" +
                 "WHERE ProductID = " + product.No + "; \r\n\r\n" +
@@ -789,20 +789,65 @@ namespace WindowsFormsApp3.Shop
             }
             else
             {
-                Class.ComboBoxItem CUSTOMERID = (CBOCustomer.SelectedItem as Class.ComboBoxItem);
-                Class.ComboBoxItem ProductID = (CBOProduct.SelectedItem as Class.ComboBoxItem);
-                Class.ComboBoxItem Eventid = (CBOevnet.SelectedItem as Class.ComboBoxItem);
-                Class.ComboBoxItem TransportID = (CBOTransport.SelectedItem as Class.ComboBoxItem);
-                DataTable dt = SQL.InputSQLMSSQL("SELECT Quantity \r\n" +
+                ShopApp.Class.ComboBoxItem CUSTOMERID = (CBOCustomer.SelectedItem as ShopApp.Class.ComboBoxItem);
+                ShopApp.Class.ComboBoxItem ProductID = (CBOProduct.SelectedItem as ShopApp.Class.ComboBoxItem);
+                ShopApp.Class.ComboBoxItem Eventid = (CBOevnet.SelectedItem as ShopApp.Class.ComboBoxItem);
+                ShopApp.Class.ComboBoxItem TransportID = (CBOTransport.SelectedItem as ShopApp.Class.ComboBoxItem);
+                DataTable dt = ShopApp.SQL.InputSQLMSSQL("SELECT Quantity \r\n" +
                 "FROM tblStock \r\n" +
                 "WHERE ProductID = " + ProductID.No + "; \r\n\r\n");
-                SQL.InputSQLMSSQL("INSERT INTO tblOrderProducts(CustomerID , ProductID , Quantity , EventSaleID , PriceProduct , PriceTransport , TransportID) \r\n" +
+                ShopApp.SQL.InputSQLMSSQL("INSERT INTO tblOrderProducts(CustomerID , ProductID , Quantity , EventSaleID , PriceProduct , PriceTransport , TransportID) \r\n" +
                 "VALUES ('" + CUSTOMERID.No + "','" + ProductID.No + "','" + CBOquantity.SelectedItem + "','" + Eventid.No + "','" + TBOpriceproduct.Text + "','" + TBOpricetransport.Text + "','" + TransportID.No + "'); \r\n\r\n" +
                 "UPDATE tblStock \r\n" +
                 "SET Quantity = " + (Convert.ToInt32(dt.Rows[0][0]) - Convert.ToInt32(CBOquantity.SelectedItem)) + " \r\n" +
                 "WHERE ProductID = " + ProductID.No + "; \r\n\r\n");
                 MessageBox.Show("สั่งออเดอร์นี้เข้าไปเรียบร้ออยจร้า");
             }
+
+        }
+
+        private void CBCustomer_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TBPHONENUM_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label19_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TBADDRESS_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label18_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TBIDCARD_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label17_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TBnamecustomer_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label16_Click(object sender, EventArgs e)
+        {
 
         }
     }

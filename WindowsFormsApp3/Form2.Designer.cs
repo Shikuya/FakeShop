@@ -131,6 +131,7 @@
             this.Controls.Add(this.pictureBox1);
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.KeyPreview = true;
+            this.MaximizeBox = false;
             this.Name = "Form2";
             this.Text = "Login";
             this.Load += new System.EventHandler(this.Form2_Load);

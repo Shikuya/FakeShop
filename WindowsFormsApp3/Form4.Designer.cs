@@ -96,6 +96,7 @@
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.KeyPreview = true;
+            this.MaximizeBox = false;
             this.Name = "Form4";
             this.Text = "Form4";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form4_KeyDown);

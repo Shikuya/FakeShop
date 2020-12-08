@@ -58,7 +58,7 @@
     <GenerateManifests>true</GenerateManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <SignManifests>true</SignManifests>
+    <SignManifests>false</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
     <NoWin32Manifest>true</NoWin32Manifest>
@@ -117,11 +117,11 @@
     <Compile Include="Shop\Shop_add\addCategorie.Designer.cs">
       <DependentUpon>addCategorie.cs</DependentUpon>
     </Compile>
-    <Compile Include="Shop\Shop_add\addcustomer.cs">
+    <Compile Include="Shop\Shop_add\addCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Shop\Shop_add\addcustomer.Designer.cs">
-      <DependentUpon>addcustomer.cs</DependentUpon>
+    <Compile Include="Shop\Shop_add\addCustomer.Designer.cs">
+      <DependentUpon>addCustomer.cs</DependentUpon>
     </Compile>
     <Compile Include="Shop\Shop_add\addEventSale.cs">
       <SubType>Form</SubType>
@@ -129,11 +129,11 @@
     <Compile Include="Shop\Shop_add\addEventSale.Designer.cs">
       <DependentUpon>addEventSale.cs</DependentUpon>
     </Compile>
-    <Compile Include="Shop\Shop_add\addproduct.cs">
+    <Compile Include="Shop\Shop_add\addProduct.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Shop\Shop_add\addproduct.Designer.cs">
-      <DependentUpon>addproduct.cs</DependentUpon>
+    <Compile Include="Shop\Shop_add\addProduct.Designer.cs">
+      <DependentUpon>addProduct.cs</DependentUpon>
     </Compile>
     <Compile Include="Shop\Shop_add\addTransport.cs">
       <SubType>Form</SubType>
@@ -158,6 +158,84 @@
     </Compile>
     <Compile Include="Shop\OldShop.Designer.cs">
       <DependentUpon>OldShop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Shop\Shop_delete\deleteBrand.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Shop\Shop_delete\deleteBrand.Designer.cs">
+      <DependentUpon>deleteBrand.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Shop\Shop_delete\deleteCategorie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Shop\Shop_delete\deleteCategorie.Designer.cs">
+      <DependentUpon>deleteCategorie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Shop\Shop_delete\deleteCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Shop\Shop_delete\deleteCustomer.Designer.cs">
+      <DependentUpon>deleteCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Shop\SelectCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Shop\SelectCustomer.Designer.cs">
+      <DependentUpon>SelectCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Shop\Shop_delete\deleteEventSale.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Shop\Shop_delete\deleteEventSale.Designer.cs">
+      <DependentUpon>deleteEventSale.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Shop\Shop_delete\deleteProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Shop\Shop_delete\deleteProduct.Designer.cs">
+      <DependentUpon>deleteProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Shop\Shop_delete\deleteTransport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Shop\Shop_delete\deleteTransport.Designer.cs">
+      <DependentUpon>deleteTransport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Shop\Shop_edit\editBrand.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Shop\Shop_edit\editBrand.Designer.cs">
+      <DependentUpon>editBrand.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Shop\Shop_edit\editCategorie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Shop\Shop_edit\editCategorie.Designer.cs">
+      <DependentUpon>editCategorie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Shop\Shop_edit\editCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Shop\Shop_edit\editCustomer.Designer.cs">
+      <DependentUpon>editCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Shop\Shop_edit\editEventSale.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Shop\Shop_edit\editEventSale.Designer.cs">
+      <DependentUpon>editEventSale.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Shop\Shop_edit\editProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Shop\Shop_edit\editProduct.Designer.cs">
+      <DependentUpon>editProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Shop\Shop_edit\editTransprort.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Shop\Shop_edit\editTransprort.Designer.cs">
+      <DependentUpon>editTransprort.cs</DependentUpon>
     </Compile>
     <Compile Include="SQL.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -193,6 +271,60 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Shop\OldShop.resx">
       <DependentUpon>OldShop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Shop\Shop_add\addCategorie.resx">
+      <DependentUpon>addCategorie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Shop\Shop_add\addCustomer.resx">
+      <DependentUpon>addCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Shop\Shop_add\addEventSale.resx">
+      <DependentUpon>addEventSale.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Shop\Shop_add\addProduct.resx">
+      <DependentUpon>addProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Shop\Shop_add\addTransport.resx">
+      <DependentUpon>addTransport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Shop\Shop_delete\deleteBrand.resx">
+      <DependentUpon>deleteBrand.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Shop\Shop_delete\deleteCategorie.resx">
+      <DependentUpon>deleteCategorie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Shop\Shop_delete\deleteCustomer.resx">
+      <DependentUpon>deleteCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Shop\SelectCustomer.resx">
+      <DependentUpon>SelectCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Shop\Shop_delete\deleteEventSale.resx">
+      <DependentUpon>deleteEventSale.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Shop\Shop_delete\deleteProduct.resx">
+      <DependentUpon>deleteProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Shop\Shop_delete\deleteTransport.resx">
+      <DependentUpon>deleteTransport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Shop\Shop_edit\editBrand.resx">
+      <DependentUpon>editBrand.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Shop\Shop_edit\editCategorie.resx">
+      <DependentUpon>editCategorie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Shop\Shop_edit\editCustomer.resx">
+      <DependentUpon>editCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Shop\Shop_edit\editEventSale.resx">
+      <DependentUpon>editEventSale.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Shop\Shop_edit\editProduct.resx">
+      <DependentUpon>editProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Shop\Shop_edit\editTransprort.resx">
+      <DependentUpon>editTransprort.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -258,6 +390,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\back_arrow_14447.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\magnifyingglass_23798.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\confirm_smartphone_phone_checkmark_shipping_box_package_icon_141996.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

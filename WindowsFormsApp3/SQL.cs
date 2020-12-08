@@ -4,7 +4,7 @@ using System.Data;
 using System.Text;
 using System.Windows.Forms;
 
-namespace WindowsFormsApp3
+namespace ShopApp
 {
     class SQL
     {
@@ -14,7 +14,7 @@ namespace WindowsFormsApp3
         {
             DataTable dt = SQL.InputSQLMSSQL(SQLCode);
             for (int a = 0; a < dt.Rows.Count; a++)
-                cb.Items.Add(new Class.ComboBoxItem(dt.Rows[a][0].ToString(),
+                cb.Items.Add(new ShopApp.Class.ComboBoxItem(dt.Rows[a][0].ToString(),
                     dt.Rows[a][1].ToString()));
         }
         public static void LoadComboBoxInformation(String SQLCode, ComboBox[] cb)
@@ -22,7 +22,7 @@ namespace WindowsFormsApp3
             DataTable dt = SQL.InputSQLMSSQL(SQLCode);
             for (int a = 0; a < dt.Rows.Count; a++)
                 for(int x = 0; x < cb.Length;x++)
-                    cb[x].Items.Add(new Class.ComboBoxItem(dt.Rows[a][0].ToString(),
+                    cb[x].Items.Add(new ShopApp.Class.ComboBoxItem(dt.Rows[a][0].ToString(),
                         dt.Rows[a][1].ToString()));
         }
 

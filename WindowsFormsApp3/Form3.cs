@@ -19,7 +19,7 @@ namespace WindowsFormsApp3
 
         private void button1_Click(object sender, EventArgs e)
         {
-            DataTable Checkname = SQL.InputSQLMSSQL(//[] INPUT: 
+            DataTable Checkname = ShopApp.SQL.InputSQLMSSQL(//[] INPUT: 
             "SELECT Username \r\n" +
             "FROM tblLogin \r\n" +
             "WHERE Username = '"+ textBox1.Text +"' ; \r\n\r\n" );
@@ -27,7 +27,7 @@ namespace WindowsFormsApp3
             {
                 if (textBox2.Text == textBox3.Text)
                 {
-                    SQL.InputSQLMSSQL("INSERT INTO tblLogin (Username , password ,Level) \r\n" +
+                    ShopApp.SQL.InputSQLMSSQL("INSERT INTO tblLogin (Username , password ,Level) \r\n" +
                     "VALUES ('" + textBox1.Text + "','" + textBox2.Text + "' , '1'); \r\n\r\n");
                     MessageBox.Show("Register Success");
                     Form2 fm2 = new Form2();
