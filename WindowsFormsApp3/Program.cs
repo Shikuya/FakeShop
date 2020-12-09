@@ -16,7 +16,7 @@ namespace WindowsFormsApp3
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ShopApp.Shop.SaleProduct());
+            Application.Run(new ShopApp.Shop.Mainshop());
         }
     }
 }

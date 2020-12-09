@@ -32,5 +32,10 @@ namespace ShopApp.Shop.add
                 TB_transport_name.Text = "";
             }
         }
+
+        private void addTransport_SizeChanged(object sender, EventArgs e)
+        {
+            ShopApp.Class.Formulatwo.CenterSize(this, panel1);
+        }
     }
 }

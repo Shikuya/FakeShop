@@ -33,5 +33,10 @@ namespace ShopApp.Shop.add
             }
 
         }
+
+        private void addCategorie_SizeChanged(object sender, EventArgs e)
+        {
+            ShopApp.Class.Formulatwo.CenterSize(this, panel1);
+        }
     }
 }

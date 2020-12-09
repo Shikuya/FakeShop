@@ -68,6 +68,7 @@ namespace ShopApp.Shop.Shop_delete
             this.CB_Product_Baradname.Name = "CB_Product_Baradname";
             this.CB_Product_Baradname.Size = new System.Drawing.Size(185, 34);
             this.CB_Product_Baradname.TabIndex = 0;
+            this.CB_Product_Baradname.SelectedIndexChanged += new System.EventHandler(this.CB_Product_Baradname_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -105,6 +106,7 @@ namespace ShopApp.Shop.Shop_delete
             this.B_Product_DeleteProduct.TabIndex = 2;
             this.B_Product_DeleteProduct.Text = "Delete Product\r\n(Enter)";
             this.B_Product_DeleteProduct.UseVisualStyleBackColor = true;
+            this.B_Product_DeleteProduct.Click += new System.EventHandler(this.B_Product_DeleteProduct_Click);
             // 
             // panel1
             // 
@@ -130,6 +132,7 @@ namespace ShopApp.Shop.Shop_delete
             this.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
             this.Name = "deleteProduct";
             this.Text = "deleteProduct";
+            this.SizeChanged += new System.EventHandler(this.deleteProduct_SizeChanged);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

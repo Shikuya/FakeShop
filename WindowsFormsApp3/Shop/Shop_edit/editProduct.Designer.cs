@@ -146,6 +146,7 @@ namespace ShopApp.Shop.Shop_edit
             this.B_Product_Save.TabIndex = 5;
             this.B_Product_Save.Text = "Save";
             this.B_Product_Save.UseVisualStyleBackColor = true;
+            this.B_Product_Save.Click += new System.EventHandler(this.B_Product_Save_Click);
             // 
             // groupBox1
             // 
@@ -174,6 +175,7 @@ namespace ShopApp.Shop.Shop_edit
             this.CB_Product_Chang_Show_Brand.Name = "CB_Product_Chang_Show_Brand";
             this.CB_Product_Chang_Show_Brand.Size = new System.Drawing.Size(142, 34);
             this.CB_Product_Chang_Show_Brand.TabIndex = 0;
+            this.CB_Product_Chang_Show_Brand.SelectedIndexChanged += new System.EventHandler(this.CB_Product_Chang_Show_Brand_SelectedIndexChanged);
             // 
             // CB_Product_Chang_Show_Product
             // 
@@ -217,6 +219,7 @@ namespace ShopApp.Shop.Shop_edit
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(510, 289);
             this.panel1.TabIndex = 7;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // editProduct
             // 
@@ -228,6 +231,8 @@ namespace ShopApp.Shop.Shop_edit
             this.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
             this.Name = "editProduct";
             this.Text = "editProduct";
+            this.Load += new System.EventHandler(this.editProduct_Load);
+            this.SizeChanged += new System.EventHandler(this.editProduct_SizeChanged);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.panel1.ResumeLayout(false);

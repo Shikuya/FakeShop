@@ -14,7 +14,6 @@ namespace ShopApp.Shop.add
     {
         public addEventSale()
         {
-            CB_event_list.Items.Clear();
             InitializeComponent();
             ShopApp.SQL.LoadComboBoxInformation("SELECT EventSalename , EventSaleID  \r\n" +
             "FROM tblEventSale ; \r\n\r\n", new ComboBox[] {CB_event_list});
@@ -36,6 +35,7 @@ namespace ShopApp.Shop.add
                 ShopApp.SQL.InputSQLMSSQL("INSERT INTO tblEventSale(Discountpercen , Description ,EventSalename) \r\n" +
                 "VALUES('" + TB_event_persent.Text + "','" + TB_event_descliption.Text + "','" + TB_event_name.Text + "'); \r\n\r\n");
                 MessageBox.Show("เพิ่ม Event เสร็จร้อยแล้วจ้า.");
+                CB_event_list.Items.Add(TB_event_name.Text);
                 TB_event_descliption.Text = "";
                 TB_event_name.Text = "";
                 TB_event_persent.Text = "";
@@ -51,6 +51,11 @@ namespace ShopApp.Shop.add
             TB_event_console_list.Text = "Name Event is " + dt.Rows[0][0] + ". \r\n" +
                 "Discountpercen is " + dt.Rows[0][1] + " %. \r\n" +
                 "Description : " + dt.Rows[0][2] + ".";
+        }
+
+        private void addEventSale_SizeChanged(object sender, EventArgs e)
+        {
+            ShopApp.Class.Formulatwo.CenterSize(this, panel1);
         }
     }
 }

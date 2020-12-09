@@ -117,6 +117,7 @@ namespace ShopApp.Shop.Shop_edit
             this.B_Event_Save.TabIndex = 5;
             this.B_Event_Save.Text = "Save";
             this.B_Event_Save.UseVisualStyleBackColor = true;
+            this.B_Event_Save.Click += new System.EventHandler(this.B_Event_Save_Click);
             // 
             // panel1
             // 
@@ -145,6 +146,7 @@ namespace ShopApp.Shop.Shop_edit
             this.Name = "editEventSale";
             this.Text = "editEventSale";
             this.Load += new System.EventHandler(this.editEventSale_Load);
+            this.SizeChanged += new System.EventHandler(this.editEventSale_SizeChanged);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

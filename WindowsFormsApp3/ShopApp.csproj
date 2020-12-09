@@ -79,6 +79,8 @@
   <ItemGroup>
     <Compile Include="Class\AccountInfo.cs" />
     <Compile Include="Class\Class.cs" />
+    <Compile Include="Class\CustomerInformation.cs" />
+    <Compile Include="Class\Formulatwo.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -49,9 +49,11 @@
             this.TB_Console_Code = new System.Windows.Forms.TextBox();
             this.ChB_Checked_Code = new System.Windows.Forms.CheckBox();
             this.B_Confirm_Informaion = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // CB_SaleProduct_Show_Cateorie
@@ -72,6 +74,7 @@
             this.CB_SaleProduct_Show_Brand.Name = "CB_SaleProduct_Show_Brand";
             this.CB_SaleProduct_Show_Brand.Size = new System.Drawing.Size(149, 34);
             this.CB_SaleProduct_Show_Brand.TabIndex = 0;
+            this.CB_SaleProduct_Show_Brand.SelectedIndexChanged += new System.EventHandler(this.CB_SaleProduct_Show_Brand_SelectedIndexChanged);
             // 
             // CB_SaleProduct_Show_Product
             // 
@@ -91,9 +94,9 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.CB_SaleProduct_Show_Cateorie);
             this.groupBox1.Controls.Add(this.CB_SaleProduct_Show_Brand);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Location = new System.Drawing.Point(21, 15);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(718, 85);
+            this.groupBox1.Size = new System.Drawing.Size(707, 85);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Select Product";
@@ -129,7 +132,7 @@
             // 
             this.TB_Console_produc.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.TB_Console_produc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.TB_Console_produc.Location = new System.Drawing.Point(23, 103);
+            this.TB_Console_produc.Location = new System.Drawing.Point(32, 106);
             this.TB_Console_produc.Multiline = true;
             this.TB_Console_produc.Name = "TB_Console_produc";
             this.TB_Console_produc.ReadOnly = true;
@@ -143,7 +146,7 @@
             this.groupBox2.Controls.Add(this.TB_Show_Customer_IDcard);
             this.groupBox2.Controls.Add(this.TB_Show_Customer_name);
             this.groupBox2.Controls.Add(this.B_Select_Customer);
-            this.groupBox2.Location = new System.Drawing.Point(12, 220);
+            this.groupBox2.Location = new System.Drawing.Point(21, 223);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(259, 170);
             this.groupBox2.TabIndex = 3;
@@ -203,7 +206,7 @@
             this.groupBox3.Controls.Add(this.TB_Code_UseCode);
             this.groupBox3.Controls.Add(this.TB_Console_Code);
             this.groupBox3.Controls.Add(this.ChB_Checked_Code);
-            this.groupBox3.Location = new System.Drawing.Point(277, 141);
+            this.groupBox3.Location = new System.Drawing.Point(286, 144);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(173, 249);
             this.groupBox3.TabIndex = 4;
@@ -255,12 +258,24 @@
             this.B_Confirm_Informaion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.B_Confirm_Informaion.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("B_Confirm_Informaion.BackgroundImage")));
             this.B_Confirm_Informaion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.B_Confirm_Informaion.Location = new System.Drawing.Point(512, 286);
+            this.B_Confirm_Informaion.Location = new System.Drawing.Point(513, 284);
             this.B_Confirm_Informaion.Name = "B_Confirm_Informaion";
             this.B_Confirm_Informaion.Size = new System.Drawing.Size(181, 86);
             this.B_Confirm_Informaion.TabIndex = 5;
             this.B_Confirm_Informaion.Text = "Confirm Order";
             this.B_Confirm_Informaion.UseVisualStyleBackColor = false;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.B_Confirm_Informaion);
+            this.panel1.Controls.Add(this.groupBox3);
+            this.panel1.Controls.Add(this.groupBox2);
+            this.panel1.Controls.Add(this.TB_Console_produc);
+            this.panel1.Controls.Add(this.groupBox1);
+            this.panel1.Location = new System.Drawing.Point(12, 12);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(739, 395);
+            this.panel1.TabIndex = 6;
             // 
             // SaleProduct
             // 
@@ -268,24 +283,23 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(742, 402);
-            this.Controls.Add(this.B_Confirm_Informaion);
-            this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.TB_Console_produc);
-            this.Controls.Add(this.groupBox1);
+            this.ClientSize = new System.Drawing.Size(763, 419);
+            this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("AngsanaUPC", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
             this.Name = "SaleProduct";
             this.Text = "SaleProduct";
+            this.Load += new System.EventHandler(this.SaleProduct_Load);
+            this.SizeChanged += new System.EventHandler(this.SaleProduct_SizeChanged);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -311,5 +325,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button B_Confirm_Informaion;
+        private System.Windows.Forms.Panel panel1;
     }
 }

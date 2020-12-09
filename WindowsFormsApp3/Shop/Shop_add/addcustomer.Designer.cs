@@ -49,6 +49,7 @@
             this.BCustomer.TabIndex = 14;
             this.BCustomer.Text = "Add Customer";
             this.BCustomer.UseVisualStyleBackColor = true;
+            this.BCustomer.SizeChanged += new System.EventHandler(this.BCustomer_SizeChanged);
             this.BCustomer.Click += new System.EventHandler(this.BCustomer_Click);
             // 
             // TB_customer_Phonenum
@@ -146,6 +147,7 @@
             this.MinimizeBox = false;
             this.Name = "addcustomer";
             this.Text = "   ";
+            this.SizeChanged += new System.EventHandler(this.addcustomer_SizeChanged);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

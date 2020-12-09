@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ShopApp.Shop.Shop_delete
+namespace ShopApp.Shop
 {
     public partial class SelectCustomer : Form
     {
@@ -22,7 +22,7 @@ namespace ShopApp.Shop.Shop_delete
             {
                 DGVInformation.Rows.Add(dt.Rows[a][1], dt.Rows[a][2], dt.Rows[a][4], dt.Rows[a][3]);
             }
-            
+
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -34,12 +34,12 @@ namespace ShopApp.Shop.Shop_delete
         {
             DGVInformation.Rows.Clear();
             //[] INPUT: 
-            DataTable dt =ShopApp.SQL.InputSQLMSSQL("SELECT TOP (50) * \r\n" +
+            DataTable dt = ShopApp.SQL.InputSQLMSSQL("SELECT TOP (50) * \r\n" +
             "FROM tblCustomers \r\n" +
-            "WHERE Customername LIKE '"+TB_Select.Text+ "%' or IDcardnum LIKE '" + TB_Select.Text + "%' or Address LIKE '" + TB_Select.Text + "%' or PhoneNumber LIKE '" + TB_Select.Text + "%'; \r\n\r\n");
+            "WHERE Customername LIKE '" + TB_Select.Text + "%' or IDcardnum LIKE '" + TB_Select.Text + "%' or Address LIKE '" + TB_Select.Text + "%' or PhoneNumber LIKE '" + TB_Select.Text + "%'; \r\n\r\n");
             for (int a = 0; a < dt.Rows.Count; a++)
             {
-                DGVInformation.Rows.Add(dt.Rows[a][1],dt.Rows[a][2],dt.Rows[a][4],dt.Rows[a][3]);
+                DGVInformation.Rows.Add(dt.Rows[a][1], dt.Rows[a][2], dt.Rows[a][4], dt.Rows[a][3]);
             }
         }
 
@@ -47,5 +47,26 @@ namespace ShopApp.Shop.Shop_delete
         {
 
         }
+
+        private void DGVInformation_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        public void DGVInformation_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int rowIndex = e.RowIndex;
+            DataGridViewRow row = DGVInformation.Rows[rowIndex];
+            ShopApp.Class.CustomerInformation.Name = row.Cells[0].Value.ToString();
+            ShopApp.Class.CustomerInformation.Idcard = row.Cells[1].Value.ToString();
+            ShopApp.Class.CustomerInformation.phonenum = row.Cells[2].Value.ToString();
+            this.Hide();
+        }
+
+        private void SelectCustomer_SizeChanged(object sender, EventArgs e)
+        {
+            ShopApp.Class.Formulatwo.CenterSize(this, panel1);
+        }
     }
 }
+

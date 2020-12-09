@@ -137,6 +137,7 @@ namespace ShopApp.Shop.Shop_edit
             this.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
             this.Name = "editTransprort";
             this.Text = "editTransprort";
+            this.SizeChanged += new System.EventHandler(this.editTransprort_SizeChanged);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.panel1.ResumeLayout(false);

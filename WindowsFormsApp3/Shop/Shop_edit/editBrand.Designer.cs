@@ -29,23 +29,23 @@ namespace ShopApp.Shop.Shop_edit
         /// </summary>
         private void InitializeComponent()
         {
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.CB_Brand_Show_list = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.TB_Brand_Change_name = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.B_Brand_Save = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // comboBox1
+            // CB_Brand_Show_list
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(95, 20);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(168, 34);
-            this.comboBox1.TabIndex = 0;
+            this.CB_Brand_Show_list.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CB_Brand_Show_list.FormattingEnabled = true;
+            this.CB_Brand_Show_list.Location = new System.Drawing.Point(95, 20);
+            this.CB_Brand_Show_list.Name = "CB_Brand_Show_list";
+            this.CB_Brand_Show_list.Size = new System.Drawing.Size(168, 34);
+            this.CB_Brand_Show_list.TabIndex = 0;
             // 
             // label1
             // 
@@ -57,12 +57,12 @@ namespace ShopApp.Shop.Shop_edit
             this.label1.Text = "Brand :";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // textBox1
+            // TB_Brand_Change_name
             // 
-            this.textBox1.Location = new System.Drawing.Point(96, 60);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(167, 34);
-            this.textBox1.TabIndex = 2;
+            this.TB_Brand_Change_name.Location = new System.Drawing.Point(96, 60);
+            this.TB_Brand_Change_name.Name = "TB_Brand_Change_name";
+            this.TB_Brand_Change_name.Size = new System.Drawing.Size(167, 34);
+            this.TB_Brand_Change_name.TabIndex = 2;
             // 
             // label2
             // 
@@ -74,22 +74,23 @@ namespace ShopApp.Shop.Shop_edit
             this.label2.Text = "Change :";
             this.label2.Click += new System.EventHandler(this.label1_Click);
             // 
-            // button1
+            // B_Brand_Save
             // 
-            this.button1.Location = new System.Drawing.Point(110, 111);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(136, 38);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Save";
-            this.button1.UseVisualStyleBackColor = true;
+            this.B_Brand_Save.Location = new System.Drawing.Point(110, 111);
+            this.B_Brand_Save.Name = "B_Brand_Save";
+            this.B_Brand_Save.Size = new System.Drawing.Size(136, 38);
+            this.B_Brand_Save.TabIndex = 3;
+            this.B_Brand_Save.Text = "Save";
+            this.B_Brand_Save.UseVisualStyleBackColor = true;
+            this.B_Brand_Save.Click += new System.EventHandler(this.B_Brand_Save_Click);
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.B_Brand_Save);
+            this.panel1.Controls.Add(this.TB_Brand_Change_name);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.CB_Brand_Show_list);
             this.panel1.Location = new System.Drawing.Point(10, 8);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(285, 198);
@@ -105,6 +106,8 @@ namespace ShopApp.Shop.Shop_edit
             this.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
             this.Name = "editBrand";
             this.Text = "editBrand";
+            this.Load += new System.EventHandler(this.editBrand_Load);
+            this.SizeChanged += new System.EventHandler(this.editBrand_SizeChanged);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -113,11 +116,11 @@ namespace ShopApp.Shop.Shop_edit
 
         #endregion
 
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox CB_Brand_Show_list;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox TB_Brand_Change_name;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button B_Brand_Save;
         private System.Windows.Forms.Panel panel1;
     }
 }

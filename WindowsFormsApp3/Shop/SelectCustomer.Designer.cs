@@ -1,5 +1,5 @@
 ﻿
-namespace ShopApp.Shop.Shop_delete
+namespace ShopApp.Shop
 {
     partial class SelectCustomer
     {
@@ -29,10 +29,10 @@ namespace ShopApp.Shop.Shop_delete
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.TB_Select = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.address = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -64,11 +64,11 @@ namespace ShopApp.Shop.Shop_delete
             // 
             // address
             // 
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.Black;
-            this.address.DefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            this.address.DefaultCellStyle = dataGridViewCellStyle1;
             this.address.HeaderText = "ที่อยู่";
             this.address.Name = "address";
             this.address.ReadOnly = true;
@@ -76,11 +76,11 @@ namespace ShopApp.Shop.Shop_delete
             // 
             // Phonenum
             // 
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.Black;
-            this.Phonenum.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            this.Phonenum.DefaultCellStyle = dataGridViewCellStyle2;
             this.Phonenum.HeaderText = "เบอร์โทรศัพท์";
             this.Phonenum.Name = "Phonenum";
             this.Phonenum.ReadOnly = true;
@@ -88,11 +88,11 @@ namespace ShopApp.Shop.Shop_delete
             // 
             // idcard
             // 
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.Black;
-            this.idcard.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            this.idcard.DefaultCellStyle = dataGridViewCellStyle3;
             this.idcard.HeaderText = "เลขบัตรประชาชน";
             this.idcard.Name = "idcard";
             this.idcard.ReadOnly = true;
@@ -100,12 +100,12 @@ namespace ShopApp.Shop.Shop_delete
             // 
             // name
             // 
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle16.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.Color.Black;
-            this.name.DefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            this.name.DefaultCellStyle = dataGridViewCellStyle4;
             this.name.HeaderText = "ชื่อ - นามสกุล";
             this.name.Name = "name";
             this.name.ReadOnly = true;
@@ -127,7 +127,9 @@ namespace ShopApp.Shop.Shop_delete
             this.DGVInformation.ReadOnly = true;
             this.DGVInformation.Size = new System.Drawing.Size(775, 329);
             this.DGVInformation.TabIndex = 0;
+            this.DGVInformation.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVInformation_CellClick);
             this.DGVInformation.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.DGVInformation.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVInformation_CellDoubleClick);
             // 
             // panel1
             // 
@@ -149,6 +151,7 @@ namespace ShopApp.Shop.Shop_delete
             this.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
             this.Name = "SelectCustomer";
             this.Text = "deleteCustomer_2";
+            this.SizeChanged += new System.EventHandler(this.SelectCustomer_SizeChanged);
             this.TextChanged += new System.EventHandler(this.a);
             ((System.ComponentModel.ISupportInitialize)(this.DGVInformation)).EndInit();
             this.panel1.ResumeLayout(false);

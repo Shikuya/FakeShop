@@ -73,6 +73,7 @@ namespace ShopApp.Shop.Shop_delete
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(278, 183);
             this.panel1.TabIndex = 3;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // deleteTransport
             // 
@@ -84,6 +85,7 @@ namespace ShopApp.Shop.Shop_delete
             this.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
             this.Name = "deleteTransport";
             this.Text = "deleteTransport";
+            this.SizeChanged += new System.EventHandler(this.deleteTransport_SizeChanged);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

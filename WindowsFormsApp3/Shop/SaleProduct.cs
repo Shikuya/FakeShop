@@ -50,5 +50,19 @@ namespace ShopApp.Shop
                 TB_Code_UseCode.BackColor = Color.Gray;
             }
         }
+
+        private void CB_SaleProduct_Show_Brand_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SaleProduct_SizeChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void SaleProduct_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

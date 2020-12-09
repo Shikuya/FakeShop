@@ -83,6 +83,8 @@ namespace ShopApp.Shop.Shop_delete
             this.B_Customer_Delete.TabIndex = 3;
             this.B_Customer_Delete.Text = "Delete Customer\r\n(Enter)";
             this.B_Customer_Delete.UseVisualStyleBackColor = true;
+            this.B_Customer_Delete.SizeChanged += new System.EventHandler(this.B_Customer_Delete_SizeChanged);
+            this.B_Customer_Delete.Click += new System.EventHandler(this.B_Customer_Delete_Click);
             // 
             // panel1
             // 
@@ -92,9 +94,9 @@ namespace ShopApp.Shop.Shop_delete
             this.panel1.Controls.Add(this.TB_Customer_IDcard);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.TB_Customer_name);
-            this.panel1.Location = new System.Drawing.Point(10, 14);
+            this.panel1.Location = new System.Drawing.Point(10, 36);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(426, 283);
+            this.panel1.Size = new System.Drawing.Size(426, 225);
             this.panel1.TabIndex = 4;
             // 
             // B_Customer_Select
@@ -107,8 +109,9 @@ namespace ShopApp.Shop.Shop_delete
             this.B_Customer_Select.Size = new System.Drawing.Size(50, 46);
             this.B_Customer_Select.TabIndex = 2;
             this.B_Customer_Select.UseVisualStyleBackColor = false;
+            this.B_Customer_Select.Click += new System.EventHandler(this.B_Customer_Select_Click);
             // 
-            // deleteCustomer_1
+            // deleteCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 26F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -116,8 +119,11 @@ namespace ShopApp.Shop.Shop_delete
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("AngsanaUPC", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
-            this.Name = "deleteCustomer_1";
+            this.Name = "deleteCustomer";
             this.Text = "deleteCustomer";
+            this.SizeChanged += new System.EventHandler(this.deleteCustomer_SizeChanged);
+            this.MouseHover += new System.EventHandler(this.deleteCustomer_MouseHover);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.deleteCustomer_MouseMove);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

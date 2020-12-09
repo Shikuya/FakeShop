@@ -69,5 +69,10 @@ namespace ShopApp.Shop.add
                 TB_product_Quantity.Text = "";
             }
         }
+
+        private void addproduct_SizeChanged(object sender, EventArgs e)
+        {
+            ShopApp.Class.Formulatwo.CenterSize(this, panel1);
+        }
     }
 }

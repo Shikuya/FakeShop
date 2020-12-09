@@ -214,6 +214,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
             this.Name = "addproduct";
             this.Text = "addproduct";
+            this.SizeChanged += new System.EventHandler(this.addproduct_SizeChanged);
             this.GBProduct.ResumeLayout(false);
             this.GBProduct.PerformLayout();
             this.panel1.ResumeLayout(false);

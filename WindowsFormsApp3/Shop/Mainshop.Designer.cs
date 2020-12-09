@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.เพมสงตางๆToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.InformationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.TSM_1_Customer = new System.Windows.Forms.ToolStripMenuItem();
             this.TSM_1_Customer_add = new System.Windows.Forms.ToolStripMenuItem();
             this.TSM_1_Customer_edit = new System.Windows.Forms.ToolStripMenuItem();
@@ -57,32 +57,35 @@
             this.optionToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.TSM_2_CheckStock = new System.Windows.Forms.ToolStripMenuItem();
             this.TSM_2_HistoryOrder = new System.Windows.Forms.ToolStripMenuItem();
+            this.saleProductToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.TSM_3_MenuShop = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.เพมสงตางๆToolStripMenuItem,
-            this.optionToolStripMenuItem1});
+            this.InformationToolStripMenuItem,
+            this.optionToolStripMenuItem1,
+            this.saleProductToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // เพมสงตางๆToolStripMenuItem
+            // InformationToolStripMenuItem
             // 
-            this.เพมสงตางๆToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.InformationToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.TSM_1_Customer,
             this.TSM_1_Categorie,
             this.TSM_1_Brand,
             this.TSM_1_Product,
             this.TSM_1_Transport,
             this.TSM_1_event});
-            this.เพมสงตางๆToolStripMenuItem.Name = "เพมสงตางๆToolStripMenuItem";
-            this.เพมสงตางๆToolStripMenuItem.Size = new System.Drawing.Size(91, 20);
-            this.เพมสงตางๆToolStripMenuItem.Text = "1 ) จัดการข้อมูล";
+            this.InformationToolStripMenuItem.Name = "InformationToolStripMenuItem";
+            this.InformationToolStripMenuItem.Size = new System.Drawing.Size(91, 20);
+            this.InformationToolStripMenuItem.Text = "1 ) จัดการข้อมูล";
             // 
             // TSM_1_Customer
             // 
@@ -129,21 +132,21 @@
             // TSM_1_Categorie_add
             // 
             this.TSM_1_Categorie_add.Name = "TSM_1_Categorie_add";
-            this.TSM_1_Categorie_add.Size = new System.Drawing.Size(180, 22);
+            this.TSM_1_Categorie_add.Size = new System.Drawing.Size(170, 22);
             this.TSM_1_Categorie_add.Text = "1 Add Categorie";
             this.TSM_1_Categorie_add.Click += new System.EventHandler(this.TSM_1_Categorie_add_Click);
             // 
             // TSM_1_Categorie_edit
             // 
             this.TSM_1_Categorie_edit.Name = "TSM_1_Categorie_edit";
-            this.TSM_1_Categorie_edit.Size = new System.Drawing.Size(180, 22);
+            this.TSM_1_Categorie_edit.Size = new System.Drawing.Size(170, 22);
             this.TSM_1_Categorie_edit.Text = "2 Edit Categorie";
             this.TSM_1_Categorie_edit.Click += new System.EventHandler(this.TSM_1_Categorie_edit_Click);
             // 
             // TSM_1_Categorie_delete
             // 
             this.TSM_1_Categorie_delete.Name = "TSM_1_Categorie_delete";
-            this.TSM_1_Categorie_delete.Size = new System.Drawing.Size(180, 22);
+            this.TSM_1_Categorie_delete.Size = new System.Drawing.Size(170, 22);
             this.TSM_1_Categorie_delete.Text = "3 Delete Categorie";
             this.TSM_1_Categorie_delete.Click += new System.EventHandler(this.TSM_1_Categorie_delete_Click);
             // 
@@ -160,21 +163,21 @@
             // TSM_1_brand_add
             // 
             this.TSM_1_brand_add.Name = "TSM_1_brand_add";
-            this.TSM_1_brand_add.Size = new System.Drawing.Size(180, 22);
+            this.TSM_1_brand_add.Size = new System.Drawing.Size(150, 22);
             this.TSM_1_brand_add.Text = "1 Add Brand";
             this.TSM_1_brand_add.Click += new System.EventHandler(this.TSM_1_brand_add_Click);
             // 
             // TSM_1_brand_edit
             // 
             this.TSM_1_brand_edit.Name = "TSM_1_brand_edit";
-            this.TSM_1_brand_edit.Size = new System.Drawing.Size(180, 22);
+            this.TSM_1_brand_edit.Size = new System.Drawing.Size(150, 22);
             this.TSM_1_brand_edit.Text = "2 Edit Brand";
             this.TSM_1_brand_edit.Click += new System.EventHandler(this.TSM_1_brand_edit_Click);
             // 
             // TSM_1_brand_delete
             // 
             this.TSM_1_brand_delete.Name = "TSM_1_brand_delete";
-            this.TSM_1_brand_delete.Size = new System.Drawing.Size(180, 22);
+            this.TSM_1_brand_delete.Size = new System.Drawing.Size(150, 22);
             this.TSM_1_brand_delete.Text = "3 Delete Brand";
             this.TSM_1_brand_delete.Click += new System.EventHandler(this.TSM_1_brand_delete_Click);
             // 
@@ -191,21 +194,21 @@
             // TSM_1_product_add
             // 
             this.TSM_1_product_add.Name = "TSM_1_product_add";
-            this.TSM_1_product_add.Size = new System.Drawing.Size(180, 22);
+            this.TSM_1_product_add.Size = new System.Drawing.Size(161, 22);
             this.TSM_1_product_add.Text = "1 Add Product";
             this.TSM_1_product_add.Click += new System.EventHandler(this.TSM_1_product_add_Click);
             // 
             // TSM_1_product_edit
             // 
             this.TSM_1_product_edit.Name = "TSM_1_product_edit";
-            this.TSM_1_product_edit.Size = new System.Drawing.Size(180, 22);
+            this.TSM_1_product_edit.Size = new System.Drawing.Size(161, 22);
             this.TSM_1_product_edit.Text = "2 Edit Product";
             this.TSM_1_product_edit.Click += new System.EventHandler(this.TSM_1_product_edit_Click);
             // 
             // TSM_1_product_delete
             // 
             this.TSM_1_product_delete.Name = "TSM_1_product_delete";
-            this.TSM_1_product_delete.Size = new System.Drawing.Size(180, 22);
+            this.TSM_1_product_delete.Size = new System.Drawing.Size(161, 22);
             this.TSM_1_product_delete.Text = "3 Delete Product";
             this.TSM_1_product_delete.Click += new System.EventHandler(this.TSM_1_product_delete_Click);
             // 
@@ -222,21 +225,21 @@
             // TSM_1_transport_add
             // 
             this.TSM_1_transport_add.Name = "TSM_1_transport_add";
-            this.TSM_1_transport_add.Size = new System.Drawing.Size(180, 22);
+            this.TSM_1_transport_add.Size = new System.Drawing.Size(172, 22);
             this.TSM_1_transport_add.Text = "1 Add Trransport";
             this.TSM_1_transport_add.Click += new System.EventHandler(this.TSM_1_transport_add_Click);
             // 
             // TSM_1_transport_edit
             // 
             this.TSM_1_transport_edit.Name = "TSM_1_transport_edit";
-            this.TSM_1_transport_edit.Size = new System.Drawing.Size(180, 22);
+            this.TSM_1_transport_edit.Size = new System.Drawing.Size(172, 22);
             this.TSM_1_transport_edit.Text = "2 Edit Trransport";
             this.TSM_1_transport_edit.Click += new System.EventHandler(this.TSM_1_transport_edit_Click);
             // 
             // TSM_1_transport_delete
             // 
             this.TSM_1_transport_delete.Name = "TSM_1_transport_delete";
-            this.TSM_1_transport_delete.Size = new System.Drawing.Size(180, 22);
+            this.TSM_1_transport_delete.Size = new System.Drawing.Size(172, 22);
             this.TSM_1_transport_delete.Text = "3 Delete Trransport";
             this.TSM_1_transport_delete.Click += new System.EventHandler(this.TSM_1_transport_delete_Click);
             // 
@@ -253,21 +256,21 @@
             // TSM_1_event_add
             // 
             this.TSM_1_event_add.Name = "TSM_1_event_add";
-            this.TSM_1_event_add.Size = new System.Drawing.Size(180, 22);
+            this.TSM_1_event_add.Size = new System.Drawing.Size(169, 22);
             this.TSM_1_event_add.Text = "1 Add EventSale";
             this.TSM_1_event_add.Click += new System.EventHandler(this.TSM_1_event_add_Click);
             // 
             // TSM_1_event_edit
             // 
             this.TSM_1_event_edit.Name = "TSM_1_event_edit";
-            this.TSM_1_event_edit.Size = new System.Drawing.Size(180, 22);
+            this.TSM_1_event_edit.Size = new System.Drawing.Size(169, 22);
             this.TSM_1_event_edit.Text = "2 Edit EventSale";
             this.TSM_1_event_edit.Click += new System.EventHandler(this.TSM_1_event_edit_Click);
             // 
             // TSM_1_event_delete
             // 
             this.TSM_1_event_delete.Name = "TSM_1_event_delete";
-            this.TSM_1_event_delete.Size = new System.Drawing.Size(180, 22);
+            this.TSM_1_event_delete.Size = new System.Drawing.Size(169, 22);
             this.TSM_1_event_delete.Text = "3 Delete EventSale";
             this.TSM_1_event_delete.Click += new System.EventHandler(this.TSM_1_event_delete_Click);
             // 
@@ -283,14 +286,29 @@
             // TSM_2_CheckStock
             // 
             this.TSM_2_CheckStock.Name = "TSM_2_CheckStock";
-            this.TSM_2_CheckStock.Size = new System.Drawing.Size(145, 22);
+            this.TSM_2_CheckStock.Size = new System.Drawing.Size(180, 22);
             this.TSM_2_CheckStock.Text = "Check Stock";
             // 
             // TSM_2_HistoryOrder
             // 
             this.TSM_2_HistoryOrder.Name = "TSM_2_HistoryOrder";
-            this.TSM_2_HistoryOrder.Size = new System.Drawing.Size(145, 22);
+            this.TSM_2_HistoryOrder.Size = new System.Drawing.Size(180, 22);
             this.TSM_2_HistoryOrder.Text = "History Order";
+            // 
+            // saleProductToolStripMenuItem
+            // 
+            this.saleProductToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.TSM_3_MenuShop});
+            this.saleProductToolStripMenuItem.Name = "saleProductToolStripMenuItem";
+            this.saleProductToolStripMenuItem.Size = new System.Drawing.Size(98, 20);
+            this.saleProductToolStripMenuItem.Text = "3) Sale Product";
+            // 
+            // TSM_3_MenuShop
+            // 
+            this.TSM_3_MenuShop.Name = "TSM_3_MenuShop";
+            this.TSM_3_MenuShop.Size = new System.Drawing.Size(180, 22);
+            this.TSM_3_MenuShop.Text = "Menu Shop";
+            this.TSM_3_MenuShop.Click += new System.EventHandler(this.TSM_3_MenuShop_Click);
             // 
             // Mainshop
             // 
@@ -312,9 +330,7 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem เพมสงตางๆToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem InformationToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem TSM_1_Customer;
         private System.Windows.Forms.ToolStripMenuItem TSM_1_Categorie;
         private System.Windows.Forms.ToolStripMenuItem TSM_1_Brand;
@@ -342,5 +358,8 @@
         private System.Windows.Forms.ToolStripMenuItem TSM_1_event_add;
         private System.Windows.Forms.ToolStripMenuItem TSM_1_event_edit;
         private System.Windows.Forms.ToolStripMenuItem TSM_1_event_delete;
+        internal System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem saleProductToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem TSM_3_MenuShop;
     }
 }

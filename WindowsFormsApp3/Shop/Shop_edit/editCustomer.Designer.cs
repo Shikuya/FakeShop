@@ -60,6 +60,7 @@ namespace ShopApp.Shop.Shop_edit
             this.B_Customer_Select.Size = new System.Drawing.Size(52, 50);
             this.B_Customer_Select.TabIndex = 0;
             this.B_Customer_Select.UseVisualStyleBackColor = false;
+            this.B_Customer_Select.Click += new System.EventHandler(this.B_Customer_Select_Click);
             // 
             // label2
             // 
@@ -136,6 +137,7 @@ namespace ShopApp.Shop.Shop_edit
             this.B_Customer_Save.TabIndex = 7;
             this.B_Customer_Save.Text = "Save";
             this.B_Customer_Save.UseVisualStyleBackColor = true;
+            this.B_Customer_Save.Click += new System.EventHandler(this.B_Customer_Save_Click);
             // 
             // label3
             // 
@@ -214,6 +216,8 @@ namespace ShopApp.Shop.Shop_edit
             this.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
             this.Name = "editCustomer";
             this.Text = "editCustomer";
+            this.SizeChanged += new System.EventHandler(this.editCustomer_SizeChanged);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.editCustomer_MouseMove);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.groupbox1.ResumeLayout(false);

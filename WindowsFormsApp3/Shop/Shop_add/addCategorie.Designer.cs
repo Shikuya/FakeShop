@@ -105,6 +105,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
             this.Name = "addCategorie";
             this.Text = "addCategorie";
+            this.SizeChanged += new System.EventHandler(this.addCategorie_SizeChanged);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

@@ -62,6 +62,7 @@ namespace ShopApp.Shop.Shop_delete
             this.B_Customer_Delete.TabIndex = 2;
             this.B_Customer_Delete.Text = "Delete Event\r\n(Enter)";
             this.B_Customer_Delete.UseVisualStyleBackColor = true;
+            this.B_Customer_Delete.Click += new System.EventHandler(this.B_Customer_Delete_Click);
             // 
             // panel1
             // 
@@ -83,6 +84,7 @@ namespace ShopApp.Shop.Shop_delete
             this.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
             this.Name = "deleteEventSale";
             this.Text = "DeleteEventSale";
+            this.SizeChanged += new System.EventHandler(this.deleteEventSale_SizeChanged);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

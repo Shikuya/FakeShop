@@ -86,6 +86,7 @@
             this.Margin = new System.Windows.Forms.Padding(2, 7, 2, 7);
             this.Name = "addBrand";
             this.Text = "addBrand";
+            this.SizeChanged += new System.EventHandler(this.addBrand_SizeChanged);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
