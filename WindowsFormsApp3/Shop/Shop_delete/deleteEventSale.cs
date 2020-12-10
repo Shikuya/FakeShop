@@ -16,7 +16,7 @@ namespace ShopApp.Shop.Shop_delete
         {
             InitializeComponent();
             ShopApp.SQL.LoadComboBoxInformation("SELECT EventSalename , EventSaleID  \r\n" +
-            "FROM tblEventSale ; \r\n\r\n", new ComboBox[] {CB_Event_name});
+            "FROM Shop.dbo.tblEventSale ; \r\n\r\n", new ComboBox[] {CB_Event_name});
         }
 
         private void deleteEventSale_SizeChanged(object sender, EventArgs e)
@@ -34,12 +34,17 @@ namespace ShopApp.Shop.Shop_delete
             else
             {
                 ShopApp.SQL.InputSQLMSSQL(//[] INPUT: 
-            "DELETE FROM tblEventSale \r\n" +
+            "DELETE FROM Shop.dbo.tblEventSale \r\n" +
             "WHERE EventSaleID = "+Event.No+"; \r\n\r\n");
                 CB_Event_name.Items.Remove(Event.Name);
                 MessageBox.Show("ลบเสร็จเรียบร้อยแล้วครับ");
                 CB_Event_name.Text = "";
             }
+        }
+
+        private void deleteEventSale_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

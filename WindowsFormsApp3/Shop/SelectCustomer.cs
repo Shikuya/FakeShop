@@ -17,7 +17,7 @@ namespace ShopApp.Shop
             InitializeComponent();
             DataTable dt = ShopApp.SQL.InputSQLMSSQL(//[] INPUT: 
             "SELECT TOP(50)* \r\n" +
-            "FROM tblCustomers; \r\n\r\n");
+            "FROM Account.dbo.tblCustomers; \r\n\r\n");
             for (int a = 0; a < dt.Rows.Count; a++)
             {
                 DGVInformation.Rows.Add(dt.Rows[a][1], dt.Rows[a][2], dt.Rows[a][4], dt.Rows[a][3]);
@@ -35,7 +35,7 @@ namespace ShopApp.Shop
             DGVInformation.Rows.Clear();
             //[] INPUT: 
             DataTable dt = ShopApp.SQL.InputSQLMSSQL("SELECT TOP (50) * \r\n" +
-            "FROM tblCustomers \r\n" +
+            "FROM Account.dbo.tblCustomers \r\n" +
             "WHERE Customername LIKE '" + TB_Select.Text + "%' or IDcardnum LIKE '" + TB_Select.Text + "%' or Address LIKE '" + TB_Select.Text + "%' or PhoneNumber LIKE '" + TB_Select.Text + "%'; \r\n\r\n");
             for (int a = 0; a < dt.Rows.Count; a++)
             {
@@ -66,6 +66,11 @@ namespace ShopApp.Shop
         private void SelectCustomer_SizeChanged(object sender, EventArgs e)
         {
             ShopApp.Class.Formulatwo.CenterSize(this, panel1);
+        }
+
+        private void SelectCustomer_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

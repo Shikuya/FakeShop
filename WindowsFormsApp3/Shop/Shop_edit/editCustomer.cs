@@ -45,11 +45,11 @@ namespace ShopApp.Shop.Shop_edit
         {
             DataTable dtCheck = ShopApp.SQL.InputSQLMSSQL(//[] INPUT: 
             "SELECT IDcardnum \r\n" +
-            "FROM tblCustomers" +
+            "FROM Account.dbo.tblCustomers" +
             "WHERE IDcardnum = " + TB_Customer_Change_Idcard.Text + "; \r\n\r\n");
             DataTable dt = ShopApp.SQL.InputSQLMSSQL(//[] INPUT: 
             "SELECT * \r\n" +
-            "FROM tblCustomers; \r\n\r\n");
+            "FROM Account.dbo.tblCustomers; \r\n\r\n");
             if (dtCheck.Rows.Count < 1)
             {
                 if (TB_Customer_Change_Address.Text == "" || TB_Customer_Change_Idcard.Text == "" || TB_Customer_Change_name.Text == ""|| TB_Customer_Change_PhoneNum.Text == "")
@@ -59,7 +59,7 @@ namespace ShopApp.Shop.Shop_edit
                 else
                 {
                     SQL.InputSQLMSSQL(//[] INPUT: 
-                    "UPDATE tblCustomers \r\n" +
+                    "UPDATE Account.dbo.tblCustomers \r\n" +
                     "SET Customername='"+TB_Customer_Change_name.Text+"', IDcardnum='"+TB_Customer_Change_Idcard.Text+"" +
                     "' , Address = '"+TB_Customer_Change_Address.Text+"' , PhoneNumber = '"+TB_Customer_Change_PhoneNum.Text+"' \r\n" +
                     "WHERE IDcardnum = "+TB_Customer_Show_IDcard.Text+"; \r\n\r\n");
@@ -82,6 +82,11 @@ namespace ShopApp.Shop.Shop_edit
             }
 
 
+
+        }
+
+        private void editCustomer_Load(object sender, EventArgs e)
+        {
 
         }
     }

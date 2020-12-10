@@ -147,6 +147,7 @@
             this.MinimizeBox = false;
             this.Name = "addcustomer";
             this.Text = "   ";
+            this.Load += new System.EventHandler(this.addcustomer_Load);
             this.SizeChanged += new System.EventHandler(this.addcustomer_SizeChanged);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

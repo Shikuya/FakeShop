@@ -90,6 +90,7 @@ namespace ShopApp.Shop.Shop_edit
             this.B_Transport_Save.TabIndex = 3;
             this.B_Transport_Save.Text = "Save";
             this.B_Transport_Save.UseVisualStyleBackColor = true;
+            this.B_Transport_Save.Click += new System.EventHandler(this.B_Transport_Save_Click);
             // 
             // TB_Transport_Change_Detail
             // 
@@ -137,6 +138,7 @@ namespace ShopApp.Shop.Shop_edit
             this.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
             this.Name = "editTransprort";
             this.Text = "editTransprort";
+            this.Load += new System.EventHandler(this.editTransprort_Load);
             this.SizeChanged += new System.EventHandler(this.editTransprort_SizeChanged);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

@@ -16,7 +16,7 @@ namespace ShopApp.Shop.Shop_delete
         {
             InitializeComponent();
             ShopApp.SQL.LoadComboBoxInformation("SELECT Transportname , TransportID  \r\n" +
-            "FROM tbltransport ; \r\n\r\n", new ComboBox[] {CB_Transport_name});
+            "FROM General.dbo.tbltransport ; \r\n\r\n", new ComboBox[] {CB_Transport_name});
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -29,7 +29,7 @@ namespace ShopApp.Shop.Shop_delete
             {
                 ShopApp.Class.ComboBoxItem Tran = (CB_Transport_name.SelectedItem as ShopApp.Class.ComboBoxItem);
                 ShopApp.SQL.InputSQLMSSQL(//[] INPUT: 
-                "DELETE FROM tblTransport \r\n" +
+                "DELETE FROM GeneralData.dbo.tblTransport \r\n" +
                 "WHERE TransportID = "+Tran.No+"; \r\n\r\n");
                 CB_Transport_name.Items.Remove(Tran.Name);
                 MessageBox.Show("ลบขนส่งนี้เรียบร้อย");
@@ -44,6 +44,11 @@ namespace ShopApp.Shop.Shop_delete
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void deleteTransport_Load(object sender, EventArgs e)
         {
 
         }

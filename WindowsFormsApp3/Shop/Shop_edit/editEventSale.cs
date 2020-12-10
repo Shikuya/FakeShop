@@ -16,7 +16,7 @@ namespace ShopApp.Shop.Shop_edit
         {
             InitializeComponent();
             ShopApp.SQL.LoadComboBoxInformation("SELECT EventSalename , EventSaleID  \r\n" +
-            "FROM tblEventSale ; \r\n\r\n", new ComboBox[] {CB_Event_Select_Name});
+            "FROM Shop.dbo.tblEventSale ; \r\n\r\n", new ComboBox[] {CB_Event_Select_Name});
         }
 
         private void editEventSale_Load(object sender, EventArgs e)
@@ -33,14 +33,14 @@ namespace ShopApp.Shop.Shop_edit
         {
             ShopApp.Class.ComboBoxItem Event = (CB_Event_Select_Name.SelectedItem as ShopApp.Class.ComboBoxItem);
             DataTable dt = ShopApp.SQL.InputSQLMSSQL("SELECT EventSaleName \r\n" +
-                "From tblEventSale \r\n" +
+                "From Shop.dbo.tblEventSale \r\n" +
                 "WHERE EventSaleName = '"+TB_Event_Change_name.Text+"' ");
             if(TB_Event_Change_name.Text == ""||TB_Event_Change_Discount.Text == "")
             {
                 if (dt.Rows.Count < 1)
                 {
                     SQL.InputSQLMSSQL(//[] INPUT: 
-                    "UPDATE tblEventSale \r\n" +
+                    "UPDATE Shop.dbo.tblEventSale \r\n" +
                     "SET EventSalename='"+TB_Event_Change_name.Text+"', Description='"+TB_Event_Change_Discount.Text+"'" +
                     " , Description = '"+TB_Event_Change_Descliption.Text+"' \r\n" +
                     "WHERE EventSaleID="+Event.No+"; \r\n\r\n");

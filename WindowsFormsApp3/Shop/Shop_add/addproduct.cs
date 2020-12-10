@@ -16,9 +16,9 @@ namespace ShopApp.Shop.add
         {
             InitializeComponent();
             ShopApp.SQL.LoadComboBoxInformation("SELECT Categoriename , Categorieid  \r\n" +
-            "FROM tblCategories ; \r\n\r\n", new ComboBox[] { CB_product_Categoriename });
+            "FROM Shop.dbo.tblCategories ; \r\n\r\n", new ComboBox[] { CB_product_Categoriename });
             ShopApp.SQL.LoadComboBoxInformation("SELECT Brandname , Brandid  \r\n" +
-            "FROM tblBrand ; \r\n\r\n", new ComboBox[] { CB_product_brandname});
+            "FROM Shop.dbo.tblBrand ; \r\n\r\n", new ComboBox[] { CB_product_brandname});
         }
 
         private void LQuantityProduct_Click(object sender, EventArgs e)
@@ -45,20 +45,20 @@ namespace ShopApp.Shop.add
                 "DECLARE @ProductID INT; \r\n" +
                 "DECLARE @PriceID INT; \r\n \r\n" +
 
-                "INSERT INTO tblPrice(CostPrice , PriceSell , UserID) \r\n" +
+                "INSERT INTO Shop.dbo.tblPrice(CostPrice , PriceSell , UserID) \r\n" +
                 "VALUES ('" + TB_product_CostPrice.Text + "','" + TB_product_PriceSell.Text + "','" + ShopApp.Class.AccountInfo.AccountNo + "'); \r\n \r\n" +
 
                 "SELECT @PriceID = SCOPE_IDENTITY(); \r\n  \r\n" +
 
-                "INSERT INTO tblProducts(Productname , CategorieID,PriceID)  \r\n" +
+                "INSERT INTO Shop.dbo.tblProducts(Productname , CategorieID,PriceID)  \r\n" +
                 "VALUES ('" + TB_Product_name.Text + "','" + addcategorieid.No + "',@PriceID); \r\n  \r\n" +
 
                 "SELECT @ProductID = SCOPE_IDENTITY(); \r\n  \r\n" +
 
-                "INSERT INTO tblDateAddProduct(ProductID , Quantity ,PriceID)  \r\n" +
+                "INSERT INTO Shop.dbo.tblDateAddProduct(ProductID , Quantity ,PriceID)  \r\n" +
                 "VALUES (@Productid,'" + TB_product_Quantity.Text + "',@PriceID); \r\n \r\n" +
 
-                "INSERT INTO tblStock(ProductID,Quantity)  \r\n" +
+                "INSERT INTO Shop.dbo.tblStock(ProductID,Quantity)  \r\n" +
                 "VALUES (@ProductID,'" + TB_product_Quantity.Text + "'); \r\n\r\n");
                 MessageBox.Show("เพิ่มสินค้าเรียบร้อย.");
                 CB_product_brandname.Text = "";
@@ -73,6 +73,11 @@ namespace ShopApp.Shop.add
         private void addproduct_SizeChanged(object sender, EventArgs e)
         {
             ShopApp.Class.Formulatwo.CenterSize(this, panel1);
+        }
+
+        private void addproduct_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

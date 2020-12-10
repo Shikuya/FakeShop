@@ -16,7 +16,7 @@ namespace ShopApp.Shop.Shop_delete
         {
             InitializeComponent();
             ShopApp.SQL.LoadComboBoxInformation("SELECT Brandname , Brandid  \r\n" +
-            "FROM tblBrand ; \r\n\r\n", new ComboBox[] { CB_Brand_name });
+            "FROM Shop.dbo.tblBrand ; \r\n\r\n", new ComboBox[] { CB_Brand_name });
         }
 
         private void B_Brand_Delete_Click(object sender, EventArgs e)
@@ -29,7 +29,7 @@ namespace ShopApp.Shop.Shop_delete
             {
                 ShopApp.Class.ComboBoxItem brand = (CB_Brand_name.SelectedItem as ShopApp.Class.ComboBoxItem);
                 ShopApp.SQL.InputSQLMSSQL(//[] INPUT: Delete
-                "DELETE FROM tblBrand \r\n" +
+                "DELETE FROM Shop.dbo.tblBrand \r\n" +
                 "WHERE BrandID = "+brand.No+"; \r\n\r\n");
                 MessageBox.Show("ลบเสร็๋จเรียบร้อยแล้วครับ");
                 CB_Brand_name.Text = "";
@@ -41,6 +41,11 @@ namespace ShopApp.Shop.Shop_delete
         private void deleteBrand_SizeChanged(object sender, EventArgs e)
         {
             ShopApp.Class.Formulatwo.CenterSize(this, panel1);
+        }
+
+        private void deleteBrand_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

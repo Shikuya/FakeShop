@@ -21,13 +21,13 @@ namespace WindowsFormsApp3
         {
             DataTable Checkname = ShopApp.SQL.InputSQLMSSQL(//[] INPUT: 
             "SELECT Username \r\n" +
-            "FROM tblLogin \r\n" +
+            "FROM Account.dbo.tblLogin \r\n" +
             "WHERE Username = '"+ textBox1.Text +"' ; \r\n\r\n" );
             if (Checkname.Rows.Count == 0)
             {
                 if (textBox2.Text == textBox3.Text)
                 {
-                    ShopApp.SQL.InputSQLMSSQL("INSERT INTO tblLogin (Username , password ,Level) \r\n" +
+                    ShopApp.SQL.InputSQLMSSQL("INSERT INTO Account.dbo.tblLogin (Username , password ,Level) \r\n" +
                     "VALUES ('" + textBox1.Text + "','" + textBox2.Text + "' , '1'); \r\n\r\n");
                     MessageBox.Show("Register Success");
                     Form2 fm2 = new Form2();
@@ -55,6 +55,11 @@ namespace WindowsFormsApp3
             Form2 fm2 = new Form2();
             fm2.Show();
             this.Hide();
+        }
+
+        private void Form3_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

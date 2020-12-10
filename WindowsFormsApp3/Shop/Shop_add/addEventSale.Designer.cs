@@ -197,6 +197,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
             this.Name = "addEventSale";
             this.Text = "addEventSale";
+            this.Load += new System.EventHandler(this.addEventSale_Load);
             this.SizeChanged += new System.EventHandler(this.addEventSale_SizeChanged);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();

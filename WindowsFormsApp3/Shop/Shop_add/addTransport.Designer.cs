@@ -107,6 +107,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
             this.Name = "addTransport";
             this.Text = "addTransport";
+            this.Load += new System.EventHandler(this.addTransport_Load);
             this.SizeChanged += new System.EventHandler(this.addTransport_SizeChanged);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

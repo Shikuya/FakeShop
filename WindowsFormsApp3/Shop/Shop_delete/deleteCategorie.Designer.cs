@@ -85,6 +85,7 @@ namespace ShopApp.Shop.Shop_delete
             this.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
             this.Name = "deleteCategorie";
             this.Text = "deleteCategorie";
+            this.Load += new System.EventHandler(this.deleteCategorie_Load);
             this.SizeChanged += new System.EventHandler(this.deleteCategorie_SizeChanged);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

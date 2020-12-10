@@ -22,10 +22,10 @@ namespace ShopApp.Shop.add
         {
 			//[0] Select id card in dataBase INPUT: {IDCARD}
             $"SELECT IDcardnum \r\n"+
-            "FROM tblCustomers \r\n"+
+            "FROM Account.dbo.tblCustomers \r\n"+
             "WHERE IDcardnum = {IDCARD}; \r\n\r\n",
             //[1] INPSERT Customer INPUT: {NAME} {IDCARD} {ADDRESS} {PHONENUM}
-			"INSERT INTO tblCustomers(Customername , IDcardnum , Address , PhoneNumber)  \r\n"+
+			"INSERT INTO Account.dbo.tblCustomers(Customername , IDcardnum , Address , PhoneNumber)  \r\n"+
             "VALUES ('{NAME}','{IDCARD}','{ADDRESS}','{PHONENUM}'); \r\n",
         };
         public addcustomer()
@@ -78,6 +78,11 @@ namespace ShopApp.Shop.add
         private void BCustomer_SizeChanged(object sender, EventArgs e)
         {
             ShopApp.Class.Formulatwo.CenterSize(this, panel1);
+        }
+
+        private void addcustomer_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

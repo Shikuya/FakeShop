@@ -16,9 +16,9 @@ namespace ShopApp.Shop
         {
             InitializeComponent();
             ShopApp.SQL.LoadComboBoxInformation("SELECT BrandName, Brandid \r\n" +
-           "FROM tblBrand; \r\n\r\n", new ComboBox[] {CB_SaleProduct_Show_Brand});
+           "FROM Shop.dbo.tblBrand; \r\n\r\n", new ComboBox[] {CB_SaleProduct_Show_Brand});
             ShopApp.SQL.LoadComboBoxInformation("SELECT Categoriename, Categorieid \r\n" +
-            "FROM tblCategories; \r\n\r\n", new ComboBox[] { CB_SaleProduct_Show_Cateorie });
+            "FROM Shop.dbo.tblCategories; \r\n\r\n", new ComboBox[] { CB_SaleProduct_Show_Cateorie });
 
         }
 

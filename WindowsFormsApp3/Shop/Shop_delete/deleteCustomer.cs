@@ -26,7 +26,7 @@ namespace ShopApp.Shop.Shop_delete
             else
             {
                 ShopApp.SQL.InputSQLMSSQL(
-                    "DELETE FROM tblCustomers \r\n" +
+                    "DELETE FROM Account.dbo.tblCustomers \r\n" +
                     "WHERE IDcardnum = " + TB_Customer_IDcard.Text+"; \r\n\r\n");
                 MessageBox.Show("ลบผู้ใช้นี้เรียบร้อยแล้วครับ");
                 TB_Customer_IDcard.Text = "";
@@ -65,6 +65,11 @@ namespace ShopApp.Shop.Shop_delete
         private void deleteCustomer_SizeChanged(object sender, EventArgs e)
         {
             ShopApp.Class.Formulatwo.CenterSize(this, panel1);
+        }
+
+        private void deleteCustomer_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

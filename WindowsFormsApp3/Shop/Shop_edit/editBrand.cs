@@ -16,7 +16,7 @@ namespace ShopApp.Shop.Shop_edit
         {
             InitializeComponent();
             ShopApp.SQL.LoadComboBoxInformation("SELECT BrandName, Brandid \r\n" +
-            "FROM tblBrand; \r\n\r\n", new ComboBox[] {CB_Brand_Show_list});
+            "FROM Shop.dbo.tblBrand; \r\n\r\n", new ComboBox[] {CB_Brand_Show_list});
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -44,7 +44,7 @@ namespace ShopApp.Shop.Shop_edit
             else
             {
                 ShopApp.SQL.InputSQLMSSQL(//[] INPUT: 
-                "UPDATE tblBrand \r\n" +
+                "UPDATE Shop.dbo.tblBrand \r\n" +
                 "SET Brandname = '"+TB_Brand_Change_name+"' \r\n" +
                 "WHERE BrandID= "+ Brand.No+"; \r\n\r\n");
                 MessageBox.Show("แก้ไขเรียบร้อย");

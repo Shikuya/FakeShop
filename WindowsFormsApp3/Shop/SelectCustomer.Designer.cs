@@ -151,6 +151,7 @@ namespace ShopApp.Shop
             this.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
             this.Name = "SelectCustomer";
             this.Text = "deleteCustomer_2";
+            this.Load += new System.EventHandler(this.SelectCustomer_Load);
             this.SizeChanged += new System.EventHandler(this.SelectCustomer_SizeChanged);
             this.TextChanged += new System.EventHandler(this.a);
             ((System.ComponentModel.ISupportInitialize)(this.DGVInformation)).EndInit();

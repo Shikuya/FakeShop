@@ -16,7 +16,7 @@ namespace WindowsFormsApp3
         {
             InitializeComponent();
             DataTable dt = ShopApp.SQL.InputSQLMSSQL("SELECT zonename , zoneid \n" +
-            "FROM tblzone");
+            "FROM GeneralData.dbo.tblzone");
             for (int a = 0; a < dt.Rows.Count; a++)
             {
                 comboBox6.Items.Add(dt.Rows[a][0]);
@@ -56,8 +56,8 @@ namespace WindowsFormsApp3
             comboBox3.Items.Clear();
             textBox1.Clear();
             DataTable dt = ShopApp.SQL.InputSQLMSSQL("SELECT Districtname \n" +
-                "FROM tblProvince as a \n" +
-                "LEFT JOIN tblDistrict AS B ON A.provinceid = B.provinceid \n" +
+                "FROM GeneralData.dbo.tblProvince as a \n" +
+                "LEFT JOIN GeneralData.dbo.tblDistrict AS B ON A.provinceid = B.provinceid \n" +
                 "WHERE provincename = '" + comboBox1.SelectedItem + "'");
             for (int a = 0; a < dt.Rows.Count; a++)
             {
@@ -70,9 +70,9 @@ namespace WindowsFormsApp3
             comboBox3.Items.Clear();
             textBox1.Clear();
             DataTable dt = ShopApp.SQL.InputSQLMSSQL("SELECT Subdistrictname \n" +
-            "FROM tblProvince as a \n" +
-            "LEFT JOIN tblDistrict AS B ON A.provinceid = B.provinceid \n" +
-            "LEFT JOIN tblSubdistrict as c on B.Districtid = c.Districtid \n" +
+            "FROM GeneralData.dbo.tblProvince as a \n" +
+            "LEFT JOIN GeneralData.dbo.tblDistrict AS B ON A.provinceid = B.provinceid \n" +
+            "LEFT JOIN GeneralData.dbo.tblSubdistrict as c on B.Districtid = c.Districtid \n" +
             "WHERE Districtname = '" + comboBox2.SelectedItem + "'");
             for (int a = 0; a < dt.Rows.Count; a++)
             {
@@ -84,8 +84,8 @@ namespace WindowsFormsApp3
         {
             textBox1.Text = "";
             DataTable dt = ShopApp.SQL.InputSQLMSSQL("SELECT PostCode \n" +
-                "FROM tblSubdistrict as a \n" +
-                "LEFT JOIN tblDistrict as b on b.DistrictID = a.Districtid \n" +
+                "FROM GeneralData.dbo.tblSubdistrict as a \n" +
+                "LEFT JOIN GeneralData.dbo.tblDistrict as b on b.DistrictID = a.Districtid \n" +
                 "WHERE Subdistrictname = '" + comboBox3.SelectedItem + "'");
             textBox1.Text = Convert.ToString(dt.Rows[0][0]);
         }
@@ -97,8 +97,8 @@ namespace WindowsFormsApp3
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-            DataTable dt = ShopApp.SQL.InputSQLMSSQL("SELECT zoneid FROM tblzone WHERE zonename = '" + comboBox4.SelectedItem + "'");
-            ShopApp.SQL.InputSQLMSSQL("INSERT INTO tblProvince(provincename, provincenameeng, zoneid) \n" +
+            DataTable dt = ShopApp.SQL.InputSQLMSSQL("SELECT zoneid FROM GeneralData.dbo.tblzone WHERE zonename = '" + comboBox4.SelectedItem + "'");
+            ShopApp.SQL.InputSQLMSSQL("INSERT INTO GeneralData.dbo.tblProvince(provincename, provincenameeng, zoneid) \n" +
             "VALUES ('" + textBox2.Text + "','" + textBox5.Text + "','" + dt.Rows[0][0] + "');");
             MessageFinadd();
         }
@@ -120,8 +120,8 @@ namespace WindowsFormsApp3
 
         private void button4_Click(object sender, EventArgs e)
         {
-            DataTable dt = ShopApp.SQL.InputSQLMSSQL("SELECT provinceid FROM tblprovince WHERE provincename = '" + comboBox5.SelectedItem + "'");
-            ShopApp.SQL.InputSQLMSSQL("INSERT INTO tblDistrict(Districtname, Districtnameeng, Provinceid) \n" +
+            DataTable dt = ShopApp.SQL.InputSQLMSSQL("SELECT provinceid FROM GeneralData.dbo.tblprovince WHERE provincename = '" + comboBox5.SelectedItem + "'");
+            ShopApp.SQL.InputSQLMSSQL("INSERT INTO GeneralData.dbo.tblDistrict(Districtname, Districtnameeng, Provinceid) \n" +
             "VALUES ('" + textBox4.Text + "','" + textBox3.Text + "','" + dt.Rows[0][0] + "');");
             MessageFinadd();
         }
@@ -133,8 +133,8 @@ namespace WindowsFormsApp3
             comboBox3.Items.Clear();
             textBox1.Text = "";
             DataTable dt = ShopApp.SQL.InputSQLMSSQL("SELECT Provincename \n" +
-            "FROM tblzone as a \n" +
-            "LEFT JOIN tblProvince AS B ON A.zoneid = B.zoneid \n" +
+            "FROM GeneralData.dbo.tblzone as a \n" +
+            "LEFT JOIN GeneralData.dbo.tblProvince AS B ON A.zoneid = B.zoneid \n" +
             "WHERE zonename = '" + comboBox6.SelectedItem + "'");
             for (int a = 0; a < dt.Rows.Count; a++)
             {
@@ -146,8 +146,8 @@ namespace WindowsFormsApp3
         {
             comboBox5.Items.Clear();
             DataTable dt1 = ShopApp.SQL.InputSQLMSSQL("SELECT provincename , provinceid \n" +
-            "FROM tblzone as a \n" +
-            "LEFT JOIN tblProvince as b on a.zoneid = b.zoneid \n" +
+            "FROM GeneralData.dbo.tblzone as a \n" +
+            "LEFT JOIN GeneralData.dbo.tblProvince as b on a.zoneid = b.zoneid \n" +
             "WHERE zonename = '" + comboBox8.SelectedItem + "'");
             for (int a = 0; a < dt1.Rows.Count; a++)
             {
@@ -164,8 +164,8 @@ namespace WindowsFormsApp3
         {
             comboBox7.Items.Clear();
             DataTable dt = ShopApp.SQL.InputSQLMSSQL("SELECT Districtname \n" +
-              "FROM tblProvince as a \n" +
-              "LEFT JOIN tblDistrict AS B ON A.provinceid = B.provinceid \n" +
+              "FROM GeneralData.dbo.tblProvince as a \n" +
+              "LEFT JOIN GeneralData.dbo.tblDistrict AS B ON A.provinceid = B.provinceid \n" +
               "WHERE provincename = '" + comboBox9.SelectedItem + "'");
             for (int a = 0; a < dt.Rows.Count; a++)
             {
@@ -177,8 +177,8 @@ namespace WindowsFormsApp3
         {
             comboBox9.Items.Clear();
             DataTable dt1 = ShopApp.SQL.InputSQLMSSQL("SELECT provincename , provinceid \n" +
-            "FROM tblzone as a \n" +
-            "LEFT JOIN tblProvince as b on a.zoneid = b.zoneid \n" +
+            "FROM GeneralData.dbo.tblzone as a \n" +
+            "LEFT JOIN GeneralData.dbo.tblProvince as b on a.zoneid = b.zoneid \n" +
             "WHERE zonename = '" + comboBox10.SelectedItem + "'");
             for (int a = 0; a < dt1.Rows.Count; a++)
             {
@@ -188,8 +188,8 @@ namespace WindowsFormsApp3
 
         private void button3_Click_1(object sender, EventArgs e)
         {
-            DataTable dt = ShopApp.SQL.InputSQLMSSQL("SELECT Districtid FROM tblDistrict WHERE Districtname = '" + comboBox7.SelectedItem + "'");
-            ShopApp.SQL.InputSQLMSSQL("Insert INTO tblSubdistrict(Subdistrictname ,  Subdistrictnameeng , PostCode , Districtid)" +
+            DataTable dt = ShopApp.SQL.InputSQLMSSQL("SELECT Districtid FROM GeneralData.dbo.tblDistrict WHERE Districtname = '" + comboBox7.SelectedItem + "'");
+            ShopApp.SQL.InputSQLMSSQL("Insert INTO GeneralData.dbo.tblSubdistrict(Subdistrictname ,  Subdistrictnameeng , PostCode , Districtid)" +
                 "VALUES('" + textBox7.Text + "', '" + textBox6.Text + "', '" + textBox8.Text + "', '" + dt.Rows[0][0] + "')");
             MessageFinadd();
         }
@@ -207,11 +207,11 @@ namespace WindowsFormsApp3
                     else
                     {
                         DataTable re = ShopApp.SQL.InputSQLMSSQL("SELECT c.Subdistrictid \n" +
-                            "FROM tblProvince as a \n" +
-                            "LEFT JOIN tblDistrict as b on a.provinceid = b.Provinceid \n" +
-                            "LEFT JOIN tblSubdistrict as c on b.DistrictID = c.Districtid \n" +
+                            "FROM GeneralData.dbo.tblProvince as a \n" +
+                            "LEFT JOIN GeneralData.dbo.tblDistrict as b on a.provinceid = b.Provinceid \n" +
+                            "LEFT JOIN GeneralData.dbo.tblSubdistrict as c on b.DistrictID = c.Districtid \n" +
                             "WHERE provincename='"+ comboBox1.SelectedItem + "' and Districtname='"+ comboBox2.SelectedItem+"' and Subdistrictname = '"+comboBox3.SelectedItem+"'");
-                        ShopApp.SQL.InputSQLMSSQL("DELETE FROM tblSubdistrict WHERE Subdistrictid = " + re.Rows[0][0]);
+                        ShopApp.SQL.InputSQLMSSQL("DELETE FROM GeneralData.dbo.tblSubdistrict WHERE Subdistrictid = " + re.Rows[0][0]);
                         MessageFindelete();
                         Clear();
                     }
@@ -225,13 +225,13 @@ namespace WindowsFormsApp3
                     else
                     {
                         DataTable check = ShopApp.SQL.InputSQLMSSQL("SELECT b.districtid " +
-                            "FROM tblProvince as a " +
-                            "LEFT JOIN tblDistrict as b on a.provinceid = b.Provinceid " +
+                            "FROM GeneralData.dbo.tblProvince as a " +
+                            "LEFT JOIN GeneralData.dbo.tblDistrict as b on a.provinceid = b.Provinceid " +
                             "WHERE provincename = '" + comboBox1.SelectedItem + "' and " +
                             "Districtname = '" + comboBox2.SelectedItem + "'");
                         DataTable ch = ShopApp.SQL.InputSQLMSSQL("SELECT Count(Subdistrictid) \r\n" +
-                          "FROM tblSubdistrict as  a  \r\n" +
-                          "LEFT JOIN tblDistrict as b on a.Districtid = b.Districtid  \r\n" +
+                          "FROM GeneralData.dbo.tblSubdistrict as  a  \r\n" +
+                          "LEFT JOIN GeneralData.dbo.tblDistrict as b on a.Districtid = b.Districtid  \r\n" +
                           "WHERE Districtname= '"+comboBox2.SelectedItem+"'; \r\n\r\n");
                         if (Convert.ToInt32(ch.Rows[0][0]) > 0)
                         {
@@ -239,7 +239,7 @@ namespace WindowsFormsApp3
                         }
                         else
                         {
-                            ShopApp.SQL.InputSQLMSSQL("DELETE FROM tblDistrict " +
+                            ShopApp.SQL.InputSQLMSSQL("DELETE FROM GeneralData.dbo.tblDistrict " +
                                 "WHERE Districtid = " + check.Rows[0][0]);
                             MessageFindelete();
                         }
@@ -255,8 +255,8 @@ namespace WindowsFormsApp3
                     else
                     {
                         DataTable checkProvince = ShopApp.SQL.InputSQLMSSQL("SELECT districtid , b.provinceid \r\n" +
-                            "FROM tblDistrict as  a   \r\n" +
-                            "LEFT JOIN tblProvince as b on a.provinceid = b.provinceid   \r\n" +
+                            "FROM GeneralData.dbo.tblDistrict as  a   \r\n" +
+                            "LEFT JOIN GeneralData.dbo.tblProvince as b on a.provinceid = b.provinceid   \r\n" +
                             "WHERE provincename= '"+comboBox1.SelectedItem+"'; \r\n\r\n");
                         if(checkProvince.Rows.Count > 0)
                         {
@@ -264,9 +264,9 @@ namespace WindowsFormsApp3
                         }
                         else
                         {
-                            ShopApp.SQL.InputSQLMSSQL("DELETE FROM tblProvince \r\n" +
+                            ShopApp.SQL.InputSQLMSSQL("DELETE FROM GeneralData.dbo.tblProvince \r\n" +
                               "WHERE provinceid = (SELECT provinceid \r\n"+
-                            "FROM tblprovince \r\n" +
+                            "FROM GeneralData.dbo.tblprovince \r\n" +
                            "WHERE provincename = '"+comboBox1.SelectedItem+"')");
                             MessageFindelete();
                         }
@@ -322,7 +322,7 @@ namespace WindowsFormsApp3
             textBox7.Clear();
             textBox8.Clear();
             DataTable dt = ShopApp.SQL.InputSQLMSSQL("SELECT zonename \n" +
-            "FROM tblzone");
+            "FROM GeneralData.dbo.tblzone");
             for (int a = 0; a < dt.Rows.Count; a++)
             {
                 comboBox4.Items.Add(dt.Rows[a][0]);
@@ -369,6 +369,11 @@ namespace WindowsFormsApp3
                 f4.Show();
                 this.Hide();
             }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

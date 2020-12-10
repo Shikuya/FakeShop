@@ -16,7 +16,7 @@ namespace ShopApp.Shop.Shop_edit
         {
             InitializeComponent();
             ShopApp.SQL.LoadComboBoxInformation("SELECT CategorieName, Categorieid \r\n" +
-            "FROM tblCategories; \r\n\r\n", new ComboBox[] { CB_Categorie_Show_list });
+            "FROM Shop.dbo.tblCategories; \r\n\r\n", new ComboBox[] { CB_Categorie_Show_list });
         }
 
         private void editCategorie_Load(object sender, EventArgs e)
@@ -44,7 +44,7 @@ namespace ShopApp.Shop.Shop_edit
             else
             {
                 ShopApp.SQL.InputSQLMSSQL(//[] INPUT: 
-                "UPDATE tblCategories \r\n" +
+                "UPDATE Shop.dbo.tblCategories \r\n" +
                 "SET Categoriename = '" + TB_Categorie_Chage_name + "' \r\n" +
                 "WHERE Categorieid= " + Categorie.No + "; \r\n\r\n");
                 MessageBox.Show("แก้ไขเรียบร้อย");

@@ -59,12 +59,13 @@
             // 
             // TBBrand_Add_Brand
             // 
-            this.TBBrand_Add_Brand.Location = new System.Drawing.Point(116, 31);
+            this.TBBrand_Add_Brand.Location = new System.Drawing.Point(121, 31);
             this.TBBrand_Add_Brand.Margin = new System.Windows.Forms.Padding(2, 7, 2, 7);
             this.TBBrand_Add_Brand.Multiline = true;
             this.TBBrand_Add_Brand.Name = "TBBrand_Add_Brand";
             this.TBBrand_Add_Brand.Size = new System.Drawing.Size(148, 41);
             this.TBBrand_Add_Brand.TabIndex = 1;
+            this.TBBrand_Add_Brand.TextChanged += new System.EventHandler(this.TBBrand_Add_Brand_TextChanged);
             // 
             // panel1
             // 
@@ -86,6 +87,7 @@
             this.Margin = new System.Windows.Forms.Padding(2, 7, 2, 7);
             this.Name = "addBrand";
             this.Text = "addBrand";
+            this.Load += new System.EventHandler(this.addBrand_Load);
             this.SizeChanged += new System.EventHandler(this.addBrand_SizeChanged);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

@@ -216,6 +216,7 @@ namespace ShopApp.Shop.Shop_edit
             this.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
             this.Name = "editCustomer";
             this.Text = "editCustomer";
+            this.Load += new System.EventHandler(this.editCustomer_Load);
             this.SizeChanged += new System.EventHandler(this.editCustomer_SizeChanged);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.editCustomer_MouseMove);
             this.panel1.ResumeLayout(false);

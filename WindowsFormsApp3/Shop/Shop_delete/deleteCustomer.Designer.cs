@@ -121,6 +121,7 @@ namespace ShopApp.Shop.Shop_delete
             this.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
             this.Name = "deleteCustomer";
             this.Text = "deleteCustomer";
+            this.Load += new System.EventHandler(this.deleteCustomer_Load);
             this.SizeChanged += new System.EventHandler(this.deleteCustomer_SizeChanged);
             this.MouseHover += new System.EventHandler(this.deleteCustomer_MouseHover);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.deleteCustomer_MouseMove);

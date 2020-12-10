@@ -16,9 +16,9 @@ namespace ShopApp.Shop.Shop_delete
         {
             InitializeComponent();
             ShopApp.SQL.LoadComboBoxInformation("SELECT Baradname , BaradID  \r\n" +
-            "FROM tblBarad ; \r\n\r\n", new ComboBox[] { CB_Product_Baradname });
+            "FROM Shop.dbo.tblBarad ; \r\n\r\n", new ComboBox[] { CB_Product_Baradname });
             ShopApp.SQL.LoadComboBoxInformation("SELECT Categoriename , CategorieID  \r\n" +
-            "FROM tblCategories ; \r\n\r\n", new ComboBox[] { CB_Product_Categoriename });
+            "FROM Shop.dbo.tblCategories ; \r\n\r\n", new ComboBox[] { CB_Product_Categoriename });
         }
 
         private void deleteProduct_SizeChanged(object sender, EventArgs e)
@@ -36,7 +36,7 @@ namespace ShopApp.Shop.Shop_delete
             {
                 ShopApp.Class.ComboBoxItem Product = (CB_Product_Productname.SelectedItem as ShopApp.Class.ComboBoxItem);
                 ShopApp.SQL.InputSQLMSSQL(//[] INPUT: 
-                "DELETE FROM tblProducts \r\n" +
+                "DELETE FROM Shop.dbo.tblProducts \r\n" +
                 "WHERE ProductID = "+Product.No+"; \r\n\r\n");
                 CB_Product_Productname.Items.Remove(Product.Name);
                 MessageBox.Show("ลบสินค้านี้เรียบร้อยครับ");
@@ -52,8 +52,13 @@ namespace ShopApp.Shop.Shop_delete
             ShopApp.Class.ComboBoxItem categorie = (CB_Product_Categoriename.SelectedItem as ShopApp.Class.ComboBoxItem);
             ShopApp.Class.ComboBoxItem brand = (CB_Product_Baradname.SelectedItem as ShopApp.Class.ComboBoxItem);
             ShopApp.SQL.LoadComboBoxInformation("SELECT Productname , ProductID  \r\n" +
-            "FROM tblProducts " +
+            "FROM Shop.dbo.tblProducts " +
             "WHERE BrandID = "+brand.No+" and Categorieid = "+categorie.No+"; \r\n\r\n", new ComboBox[] { CB_Product_Productname });
+        }
+
+        private void deleteProduct_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

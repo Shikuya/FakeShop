@@ -26,6 +26,8 @@ namespace ShopApp.Class
             SubForm.MaximizeBox = false;
             SubForm.MinimizeBox = false;
             SubForm.FormBorderStyle = FormBorderStyle.None;
+            ShopApp.Class.CustomerInformation.Name = "";
+            ShopApp.Class.CustomerInformation.Idcard = "";
         }
     }
 }

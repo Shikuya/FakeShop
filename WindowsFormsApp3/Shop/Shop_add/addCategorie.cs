@@ -25,7 +25,7 @@ namespace ShopApp.Shop.add
             }
             else
             {
-            ShopApp.SQL.InputSQLMSSQL("INSERT INTO tblCategories(Categoriename , ShortDesciption) \r\n"+
+            ShopApp.SQL.InputSQLMSSQL("INSERT INTO Shop.dbo.tblCategories(Categoriename , ShortDesciption) \r\n" +
             "VALUES('"+TB_categorie_name.Text+"', '"+TB_categorie_descliption+"'); ");
                 MessageBox.Show("เพิ่ม Categorie นี้เรียบร้อยแล้วครับ.");
                 TB_categorie_descliption.Text = "";
@@ -37,6 +37,11 @@ namespace ShopApp.Shop.add
         private void addCategorie_SizeChanged(object sender, EventArgs e)
         {
             ShopApp.Class.Formulatwo.CenterSize(this, panel1);
+        }
+
+        private void addCategorie_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

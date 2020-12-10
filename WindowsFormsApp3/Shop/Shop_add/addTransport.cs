@@ -25,7 +25,7 @@ namespace ShopApp.Shop.add
             }
             else
             {
-                ShopApp.SQL.InputSQLMSSQL("INSERT INTO tblTransport(Transportname , TransportDetail) \r\n" +
+                ShopApp.SQL.InputSQLMSSQL("INSERT INTO GeneralData.dbo.tblTransport(Transportname , TransportDetail) \r\n" +
                 "VALUES ('" + TB_transport_name.Text + "','" + TB_transport_Detail.Text + "'); \r\n\r\n");
                 MessageBox.Show("เพิ่มขนส่งเรียบร้อย.");
                 TB_transport_Detail.Text = "";
@@ -36,6 +36,11 @@ namespace ShopApp.Shop.add
         private void addTransport_SizeChanged(object sender, EventArgs e)
         {
             ShopApp.Class.Formulatwo.CenterSize(this, panel1);
+        }
+
+        private void addTransport_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

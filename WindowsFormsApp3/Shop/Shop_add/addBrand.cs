@@ -19,30 +19,38 @@ namespace ShopApp.Shop.add
 
         private void B_add_brand_Click(object sender, EventArgs e)
         {
-            ShopApp.SQL.InputSQLMSSQL(//[] INPUT: 
-            "INSERT INTO tblBrand(Brandname) \r\n" +
-            "VALUES ('"+ TBBrand_Add_Brand +"'); \r\n\r\n");
-        }
-
-        private void CBCategorie_Add_Brand_SelectedIndexChanged(object sender, EventArgs e)
-        {
             if (TBBrand_Add_Brand.Text == "")
             {
                 MessageBox.Show("กรุณากรอกข้อมูลให้ครบครับ");
             }
             else
             {
-            ShopApp.SQL.InputSQLMSSQL("INSERT INTO tblBrand(Brandname) \r\n"+
-            "VALUES('"+TBBrand_Add_Brand.Text+"'); ");
+                ShopApp.SQL.InputSQLMSSQL("INSERT INTO Shop.dbo.tblBrand(Brandname) \r\n" +
+                "VALUES('" + TBBrand_Add_Brand.Text + "'); ");
                 MessageBox.Show("เพิ่ม Brand เรียบร้อยแล้วครับ");
                 TBBrand_Add_Brand.Text = "";
             }
+        }
+
+        private void CBCategorie_Add_Brand_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
 
         }
 
         private void addBrand_SizeChanged(object sender, EventArgs e)
         {
             ShopApp.Class.Formulatwo.CenterSize(this , panel1);
+        }
+
+        private void addBrand_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TBBrand_Add_Brand_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -116,5 +116,10 @@ namespace ShopApp.Shop
         {
             ShopApp.Class.Formulatwo.ChangPage(this, new ShopApp.Shop.SaleProduct());
         }
+
+        private void Mainshop_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

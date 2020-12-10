@@ -20,7 +20,7 @@ namespace WindowsFormsApp3
         {
 			//[0] INPUT: Check Level
 			"SELECT Level \r\n"+
-            "FROM tblLogin \r\n"+
+            "FROM Account.dbo.tblLogin \r\n"+
             "WHERE Userid = "+ShopApp.Class.AccountInfo.AccountNo+"; \r\n\r\n",
         };
         public Form4()
@@ -98,6 +98,11 @@ namespace WindowsFormsApp3
             {
                 MessageBox.Show("คุณไม่มีสิทการเข้าถึงสิ้งนี้");
             }
+        }
+
+        private void Form4_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -35,7 +35,7 @@ namespace WindowsFormsApp3
         private void LoadInformation()
         {
             DataTable userpass = ShopApp.SQL.InputSQLMSSQL("SELECT Userid  \r\n" +
-            "FROM tbllogin  \r\n" +
+            "FROM Account.dbo.tbllogin  \r\n" +
             "WHERE username = '" + textBox1.Text + "' and Password = '" + textBox2.Text + "'; \r\n");
             if (userpass.Rows.Count == 1)
             {
