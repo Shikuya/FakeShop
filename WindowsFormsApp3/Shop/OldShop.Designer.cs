@@ -167,7 +167,7 @@
             this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Controls.Add(this.tabPage6);
             this.tabControl1.Controls.Add(this.tabPage7);
-            this.tabControl1.Location = new System.Drawing.Point(12, 25);
+            this.tabControl1.Location = new System.Drawing.Point(266, 93);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(543, 334);
@@ -1128,6 +1128,7 @@
             this.GBorder.Controls.Add(this.TBOpricetransport);
             this.GBorder.Controls.Add(this.TBOpriceproduct);
             this.GBorder.Controls.Add(this.TBOconsole);
+            this.GBorder.Controls.Add(this.tabControl1);
             this.GBorder.Controls.Add(this.CBOTransport);
             this.GBorder.Controls.Add(this.CBOCustomer);
             this.GBorder.Controls.Add(this.CBOevnet);
@@ -1369,7 +1370,6 @@
             this.Controls.Add(this.RBOFF);
             this.Controls.Add(this.RBDelete);
             this.Controls.Add(this.RBAdd);
-            this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.GBTESTCODE);
             this.Controls.Add(this.GBorder);

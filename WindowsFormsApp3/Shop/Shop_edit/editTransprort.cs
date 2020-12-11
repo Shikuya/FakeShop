@@ -50,5 +50,10 @@ namespace ShopApp.Shop.Shop_edit
                 CB_Transport_Change_Show_TransportName.Items.Add(TB_Transport_Change_name.Text);
             }
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

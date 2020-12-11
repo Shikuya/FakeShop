@@ -54,5 +54,10 @@ namespace ShopApp.Shop.Shop_edit
                 CB_Categorie_Show_list.Items.Add(TB_Categorie_Chage_name.Text);
             }
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

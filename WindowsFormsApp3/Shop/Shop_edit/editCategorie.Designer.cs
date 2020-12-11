@@ -51,6 +51,7 @@ namespace ShopApp.Shop.Shop_edit
             this.panel1.Size = new System.Drawing.Size(316, 205);
             this.panel1.TabIndex = 5;
             this.panel1.SizeChanged += new System.EventHandler(this.panel1_SizeChanged);
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // B_Categorie_Save
             // 

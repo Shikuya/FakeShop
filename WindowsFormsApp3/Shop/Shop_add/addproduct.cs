@@ -50,8 +50,8 @@ namespace ShopApp.Shop.add
 
                 "SELECT @PriceID = SCOPE_IDENTITY(); \r\n  \r\n" +
 
-                "INSERT INTO Shop.dbo.tblProducts(Productname , CategorieID,PriceID)  \r\n" +
-                "VALUES ('" + TB_Product_name.Text + "','" + addcategorieid.No + "',@PriceID); \r\n  \r\n" +
+                "INSERT INTO Shop.dbo.tblProducts(Productname , CategorieID,PriceID , brandid)  \r\n" +
+                "VALUES ('" + TB_Product_name.Text + "','" + addcategorieid.No + "',@PriceID , "+ addbrandid.No + "); \r\n  \r\n" +
 
                 "SELECT @ProductID = SCOPE_IDENTITY(); \r\n  \r\n" +
 

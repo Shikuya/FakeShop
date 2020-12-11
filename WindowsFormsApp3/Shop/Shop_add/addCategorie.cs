@@ -26,7 +26,7 @@ namespace ShopApp.Shop.add
             else
             {
             ShopApp.SQL.InputSQLMSSQL("INSERT INTO Shop.dbo.tblCategories(Categoriename , ShortDesciption) \r\n" +
-            "VALUES('"+TB_categorie_name.Text+"', '"+TB_categorie_descliption+"'); ");
+            "VALUES('"+TB_categorie_name.Text+"', '"+TB_categorie_descliption.Text+"'); ");
                 MessageBox.Show("เพิ่ม Categorie นี้เรียบร้อยแล้วครับ.");
                 TB_categorie_descliption.Text = "";
                 TB_categorie_name.Text = "";
