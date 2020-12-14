@@ -13,7 +13,7 @@ namespace ShopApp.Class
         //ReSize Panel  -- > Center {Form} {panel}
         public static void CenterSize(Form F1, Panel P1)
         {
-            P1.Location = new Point((F1.Width / 2) - (P1.Size.Width / 2), F1.Height / 2 - (P1.Size.Height / 2));
+            P1.Location = new Point((F1.Width / 2) - (P1.Size.Width / 2), F1.Height / 2 - (P1.Size.Height / 2) + 20);
         }
         //Chage Page {main form} {to from}
         public static void ChangPage(Form MainForm, Form SubForm)

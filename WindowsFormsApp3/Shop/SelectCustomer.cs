@@ -12,6 +12,10 @@ namespace ShopApp.Shop
 {
     public partial class SelectCustomer : Form
     {
+        public static String ReturnID = "";
+        public static Form FormNew;
+
+
         public SelectCustomer()
         {
             InitializeComponent();
@@ -20,8 +24,18 @@ namespace ShopApp.Shop
             "FROM Account.dbo.tblCustomers; \r\n\r\n");
             for (int a = 0; a < dt.Rows.Count; a++)
             {
-                DGVInformation.Rows.Add(dt.Rows[a][1], dt.Rows[a][2], dt.Rows[a][4], dt.Rows[a][3]);
+                DGVInformation.Rows.Add(dt.Rows[a][1], dt.Rows[a][2], dt.Rows[a][4], dt.Rows[a][3] , dt.Rows[a][0]);
             }
+
+        }
+
+        public static String Showed()
+        {
+            ReturnID = "";
+            FormNew = new SelectCustomer();
+            FormNew.ShowDialog();
+            return ReturnID;
+
 
         }
 
@@ -39,7 +53,7 @@ namespace ShopApp.Shop
             "WHERE Customername LIKE '" + TB_Select.Text + "%' or IDcardnum LIKE '" + TB_Select.Text + "%' or Address LIKE '" + TB_Select.Text + "%' or PhoneNumber LIKE '" + TB_Select.Text + "%'; \r\n\r\n");
             for (int a = 0; a < dt.Rows.Count; a++)
             {
-                DGVInformation.Rows.Add(dt.Rows[a][1], dt.Rows[a][2], dt.Rows[a][4], dt.Rows[a][3]);
+                DGVInformation.Rows.Add(dt.Rows[a][1], dt.Rows[a][2], dt.Rows[a][4], dt.Rows[a][3] , dt.Rows[a][0]);
             }
         }
 
@@ -60,6 +74,7 @@ namespace ShopApp.Shop
             ShopApp.Class.CustomerInformation.Name = row.Cells[0].Value.ToString();
             ShopApp.Class.CustomerInformation.Idcard = row.Cells[1].Value.ToString();
             ShopApp.Class.CustomerInformation.phonenum = row.Cells[2].Value.ToString();
+            ReturnID = row.Cells[4].Value.ToString();
             this.Hide();
         }
 

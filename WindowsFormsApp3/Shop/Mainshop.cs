@@ -114,7 +114,7 @@ namespace ShopApp.Shop
 
         private void TSM_3_MenuShop_Click(object sender, EventArgs e)
         {
-            ShopApp.Class.Formulatwo.ChangPage(this, new ShopApp.Shop.SaleProduct());
+            ShopApp.Class.Formulatwo.ChangPage(this, new ShopApp.Shop.Product_Sale());
         }
 
         private void Mainshop_Load(object sender, EventArgs e)
