@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ShopApp.Shop
+namespace ShopApp.Shop.add
 {
     public partial class updateStock : Form
     {

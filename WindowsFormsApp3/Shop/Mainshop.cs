@@ -124,7 +124,7 @@ namespace ShopApp.Shop
 
         private void updateStockToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ShopApp.Class.Formulatwo.ChangPage(this, new ShopApp.Shop.updateStock());
+            ShopApp.Class.Formulatwo.ChangPage(this, new ShopApp.Shop.add.updateStock());
         }
     }
 }

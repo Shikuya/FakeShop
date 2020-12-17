@@ -1,5 +1,5 @@
 ﻿
-namespace ShopApp.Shop
+namespace ShopApp.Shop.add
 {
     partial class updateStock
     {

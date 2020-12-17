@@ -35,8 +35,6 @@ namespace ShopApp.Shop
             FormNew = new SelectCustomer();
             FormNew.ShowDialog();
             return ReturnID;
-
-
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -84,6 +82,11 @@ namespace ShopApp.Shop
         }
 
         private void SelectCustomer_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
