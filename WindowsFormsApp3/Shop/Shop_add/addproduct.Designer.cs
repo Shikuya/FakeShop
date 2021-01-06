@@ -43,6 +43,8 @@
             this.CB_product_brandname = new System.Windows.Forms.ComboBox();
             this.CB_product_Categoriename = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.TB_CodeProduct = new System.Windows.Forms.TextBox();
             this.GBProduct.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -52,12 +54,14 @@
             this.GBProduct.Controls.Add(this.B_product_add);
             this.GBProduct.Controls.Add(this.TB_product_CostPrice);
             this.GBProduct.Controls.Add(this.TB_product_PriceSell);
+            this.GBProduct.Controls.Add(this.TB_CodeProduct);
             this.GBProduct.Controls.Add(this.TB_product_Quantity);
             this.GBProduct.Controls.Add(this.Lnamebrandproduct);
             this.GBProduct.Controls.Add(this.TB_Product_name);
             this.GBProduct.Controls.Add(this.label5);
             this.GBProduct.Controls.Add(this.label4);
             this.GBProduct.Controls.Add(this.LQuantityProduct);
+            this.GBProduct.Controls.Add(this.label1);
             this.GBProduct.Controls.Add(this.LnameProduct);
             this.GBProduct.Controls.Add(this.LnameCategorieproduct);
             this.GBProduct.Controls.Add(this.CB_product_brandname);
@@ -66,14 +70,14 @@
             this.GBProduct.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
             this.GBProduct.Name = "GBProduct";
             this.GBProduct.Padding = new System.Windows.Forms.Padding(3, 6, 3, 6);
-            this.GBProduct.Size = new System.Drawing.Size(338, 348);
+            this.GBProduct.Size = new System.Drawing.Size(337, 388);
             this.GBProduct.TabIndex = 4;
             this.GBProduct.TabStop = false;
             this.GBProduct.Text = "Add Product";
             // 
             // B_product_add
             // 
-            this.B_product_add.Location = new System.Drawing.Point(102, 263);
+            this.B_product_add.Location = new System.Drawing.Point(102, 309);
             this.B_product_add.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
             this.B_product_add.Name = "B_product_add";
             this.B_product_add.Size = new System.Drawing.Size(166, 60);
@@ -84,7 +88,7 @@
             // 
             // TB_product_CostPrice
             // 
-            this.TB_product_CostPrice.Location = new System.Drawing.Point(87, 213);
+            this.TB_product_CostPrice.Location = new System.Drawing.Point(87, 259);
             this.TB_product_CostPrice.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
             this.TB_product_CostPrice.Name = "TB_product_CostPrice";
             this.TB_product_CostPrice.Size = new System.Drawing.Size(79, 34);
@@ -92,7 +96,7 @@
             // 
             // TB_product_PriceSell
             // 
-            this.TB_product_PriceSell.Location = new System.Drawing.Point(250, 217);
+            this.TB_product_PriceSell.Location = new System.Drawing.Point(250, 263);
             this.TB_product_PriceSell.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
             this.TB_product_PriceSell.Name = "TB_product_PriceSell";
             this.TB_product_PriceSell.Size = new System.Drawing.Size(77, 34);
@@ -100,7 +104,7 @@
             // 
             // TB_product_Quantity
             // 
-            this.TB_product_Quantity.Location = new System.Drawing.Point(102, 166);
+            this.TB_product_Quantity.Location = new System.Drawing.Point(102, 212);
             this.TB_product_Quantity.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
             this.TB_product_Quantity.Name = "TB_product_Quantity";
             this.TB_product_Quantity.Size = new System.Drawing.Size(166, 34);
@@ -128,7 +132,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(8, 217);
+            this.label5.Location = new System.Drawing.Point(8, 263);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(74, 16);
             this.label5.TabIndex = 1;
@@ -138,7 +142,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(172, 221);
+            this.label4.Location = new System.Drawing.Point(172, 267);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(71, 16);
             this.label4.TabIndex = 1;
@@ -148,7 +152,7 @@
             // 
             this.LQuantityProduct.AutoSize = true;
             this.LQuantityProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LQuantityProduct.Location = new System.Drawing.Point(27, 174);
+            this.LQuantityProduct.Location = new System.Drawing.Point(27, 220);
             this.LQuantityProduct.Name = "LQuantityProduct";
             this.LQuantityProduct.Size = new System.Drawing.Size(62, 16);
             this.LQuantityProduct.TabIndex = 1;
@@ -201,14 +205,32 @@
             this.panel1.Controls.Add(this.GBProduct);
             this.panel1.Location = new System.Drawing.Point(8, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(385, 387);
+            this.panel1.Size = new System.Drawing.Size(382, 417);
             this.panel1.TabIndex = 5;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(8, 177);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(93, 16);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "CodeProduct :";
+            // 
+            // TB_CodeProduct
+            // 
+            this.TB_CodeProduct.Location = new System.Drawing.Point(102, 166);
+            this.TB_CodeProduct.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
+            this.TB_CodeProduct.Name = "TB_CodeProduct";
+            this.TB_CodeProduct.Size = new System.Drawing.Size(166, 34);
+            this.TB_CodeProduct.TabIndex = 3;
             // 
             // addproduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 26F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(403, 412);
+            this.ClientSize = new System.Drawing.Size(409, 449);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("AngsanaUPC", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
@@ -240,5 +262,7 @@
         private System.Windows.Forms.ComboBox CB_product_brandname;
         private System.Windows.Forms.ComboBox CB_product_Categoriename;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TextBox TB_CodeProduct;
+        private System.Windows.Forms.Label label1;
     }
 }

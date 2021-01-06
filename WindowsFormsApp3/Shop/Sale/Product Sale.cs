@@ -29,7 +29,7 @@ namespace ShopApp.Shop
             //[1] Select Event INPUT: {Eventname} 
 			"SELECT EventSalename , Status , Discountpercen , EventSaleID \r\n"+
             "FROM SHOP.dbo.tblEventSale \r\n"+
-            "WHERE EventSalename = N'{Eventname}'; \r\n\r\n",
+            "WHERE EventSalename = '{Eventname}'; \r\n\r\n",
 
             //[2] Select Product INPUT: {CodeProduct} 
 			"Select CodeProduct , a.Productname , Quantity , PriceSell , a.ProductID  \r\n"+
@@ -99,7 +99,7 @@ namespace ShopApp.Shop
             }
             else
             {
-                if (!((Convert.ToInt32(dt.Rows[0][1]) == 1)))
+                if (!((Convert.ToInt32(dt.Rows[0][1]) == 0))) //Chaeck Status 0 = true 1 = false
                 {
                     ConsoleCode(dt.Rows[0][0] + "", "expire", "0");
                 }
@@ -328,12 +328,18 @@ namespace ShopApp.Shop
 
         public void TB_Transport_TextChanged(object sender, EventArgs e)
         {
-
+            
         }
 
         public void TB_Code_UseCode_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void B_Confirm_Order_Click(object sender, EventArgs e)
+        {
+            Form kidmoney = new ShopApp.Shop.kidmoney();
+            kidmoney.Show();
         }
     }
 }

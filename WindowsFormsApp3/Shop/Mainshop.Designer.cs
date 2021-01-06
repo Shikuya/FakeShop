@@ -288,19 +288,20 @@
             // TSM_2_CheckStock
             // 
             this.TSM_2_CheckStock.Name = "TSM_2_CheckStock";
-            this.TSM_2_CheckStock.Size = new System.Drawing.Size(145, 22);
+            this.TSM_2_CheckStock.Size = new System.Drawing.Size(180, 22);
             this.TSM_2_CheckStock.Text = "Check Stock";
+            this.TSM_2_CheckStock.Click += new System.EventHandler(this.TSM_2_CheckStock_Click);
             // 
             // TSM_2_HistoryOrder
             // 
             this.TSM_2_HistoryOrder.Name = "TSM_2_HistoryOrder";
-            this.TSM_2_HistoryOrder.Size = new System.Drawing.Size(145, 22);
+            this.TSM_2_HistoryOrder.Size = new System.Drawing.Size(180, 22);
             this.TSM_2_HistoryOrder.Text = "History Order";
             // 
             // updateStockToolStripMenuItem
             // 
             this.updateStockToolStripMenuItem.Name = "updateStockToolStripMenuItem";
-            this.updateStockToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
+            this.updateStockToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.updateStockToolStripMenuItem.Text = "Update Stock";
             this.updateStockToolStripMenuItem.Click += new System.EventHandler(this.updateStockToolStripMenuItem_Click);
             // 
@@ -315,7 +316,7 @@
             // TSM_3_MenuShop
             // 
             this.TSM_3_MenuShop.Name = "TSM_3_MenuShop";
-            this.TSM_3_MenuShop.Size = new System.Drawing.Size(135, 22);
+            this.TSM_3_MenuShop.Size = new System.Drawing.Size(180, 22);
             this.TSM_3_MenuShop.Text = "Menu Shop";
             this.TSM_3_MenuShop.Click += new System.EventHandler(this.TSM_3_MenuShop_Click);
             // 

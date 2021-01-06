@@ -33,7 +33,7 @@ namespace ShopApp.Shop.add
             else
             {
                 ShopApp.SQL.InputSQLMSSQL("INSERT INTO Shop.dbo.tblEventSale(Discountpercen , Description ,EventSalename , Status) \r\n" +
-                "VALUES('" + TB_event_persent.Text + "','" + TB_event_descliption.Text + "','" + TB_event_name.Text + "' , '1'); \r\n\r\n");
+                "VALUES('" + TB_event_persent.Text + "','" + TB_event_descliption.Text + "','" + TB_event_name.Text + "' , '0'); \r\n\r\n");
                 MessageBox.Show("เพิ่ม Event เสร็จร้อยแล้วจ้า.");
                 CB_event_list.Items.Add(TB_event_name.Text);
                 TB_event_descliption.Text = "";

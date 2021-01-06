@@ -126,5 +126,10 @@ namespace ShopApp.Shop
         {
             ShopApp.Class.Formulatwo.ChangPage(this, new ShopApp.Shop.add.updateStock());
         }
+
+        private void TSM_2_CheckStock_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

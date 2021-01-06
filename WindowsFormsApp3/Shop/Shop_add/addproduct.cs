@@ -35,7 +35,7 @@ namespace ShopApp.Shop.add
         {
             ShopApp.Class.ComboBoxItem addbrandid = (CB_product_brandname.SelectedItem as ShopApp.Class.ComboBoxItem);
             ShopApp.Class.ComboBoxItem addcategorieid = (CB_product_Categoriename.SelectedItem as ShopApp.Class.ComboBoxItem);
-            if (CB_product_brandname.Text == "" || CB_product_Categoriename.Text == "" || TB_Product_name.Text == "" || TB_product_CostPrice.Text == "" || TB_product_PriceSell.Text == "" || TB_product_Quantity.Text == "")
+            if (CB_product_brandname.Text == "" || CB_product_Categoriename.Text == "" || TB_Product_name.Text == "" || TB_product_CostPrice.Text == "" || TB_product_PriceSell.Text == "" || TB_product_Quantity.Text == "" || TB_CodeProduct.Text == "")
             {
                 MessageBox.Show("กรุณากรอกข้อมูลให้ครบ.");
             }
@@ -50,8 +50,8 @@ namespace ShopApp.Shop.add
 
                 "SELECT @PriceID = SCOPE_IDENTITY(); \r\n  \r\n" +
 
-                "INSERT INTO Shop.dbo.tblProducts(Productname , CategorieID,PriceID , brandid)  \r\n" +
-                "VALUES ('" + TB_Product_name.Text + "','" + addcategorieid.No + "',@PriceID , "+ addbrandid.No + "); \r\n  \r\n" +
+                "INSERT INTO Shop.dbo.tblProducts(Productname , CategorieID,PriceID , brandid , CodeProduct)  \r\n" +
+                "VALUES ('" + TB_Product_name.Text + "','" + addcategorieid.No + "',@PriceID , "+ addbrandid.No + " , '"+TB_CodeProduct.Text+"'); \r\n  \r\n" +
 
                 "SELECT @ProductID = SCOPE_IDENTITY(); \r\n  \r\n" +
 
@@ -67,6 +67,7 @@ namespace ShopApp.Shop.add
                 TB_Product_name.Text = "";
                 TB_product_PriceSell.Text = "";
                 TB_product_Quantity.Text = "";
+                TB_CodeProduct.Text = "";
             }
         }
 

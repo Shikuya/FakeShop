@@ -209,6 +209,7 @@ namespace ShopApp.Shop
             this.B_Confirm_Order.TabIndex = 9;
             this.B_Confirm_Order.Text = "Confirm Order (F1)";
             this.B_Confirm_Order.UseVisualStyleBackColor = false;
+            this.B_Confirm_Order.Click += new System.EventHandler(this.B_Confirm_Order_Click);
             // 
             // label3
             // 
