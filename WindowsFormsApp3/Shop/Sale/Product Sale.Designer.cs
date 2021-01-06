@@ -88,7 +88,7 @@ namespace ShopApp.Shop
             // 
             // TB_Transport
             // 
-            this.TB_Transport.Location = new System.Drawing.Point(327, 149);
+            this.TB_Transport.Location = new System.Drawing.Point(326, 149);
             this.TB_Transport.Name = "TB_Transport";
             this.TB_Transport.ReadOnly = true;
             this.TB_Transport.Size = new System.Drawing.Size(45, 34);
@@ -191,7 +191,7 @@ namespace ShopApp.Shop
             this.groupBox2.Controls.Add(this.B_list_Product);
             this.groupBox2.Controls.Add(this.DGV_Product);
             this.groupBox2.Controls.Add(this.TB_Select_Product);
-            this.groupBox2.Location = new System.Drawing.Point(380, 8);
+            this.groupBox2.Location = new System.Drawing.Point(381, 8);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(644, 328);
             this.groupBox2.TabIndex = 9;
@@ -239,7 +239,7 @@ namespace ShopApp.Shop
             // 
             // B_AddProduct
             // 
-            this.B_AddProduct.Location = new System.Drawing.Point(514, 24);
+            this.B_AddProduct.Location = new System.Drawing.Point(514, 23);
             this.B_AddProduct.Name = "B_AddProduct";
             this.B_AddProduct.Size = new System.Drawing.Size(130, 35);
             this.B_AddProduct.TabIndex = 8;
@@ -250,7 +250,7 @@ namespace ShopApp.Shop
             // TB_Balance_product
             // 
             this.TB_Balance_product.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.TB_Balance_product.Location = new System.Drawing.Point(528, 106);
+            this.TB_Balance_product.Location = new System.Drawing.Point(527, 105);
             this.TB_Balance_product.Name = "TB_Balance_product";
             this.TB_Balance_product.ReadOnly = true;
             this.TB_Balance_product.Size = new System.Drawing.Size(87, 34);
@@ -359,7 +359,7 @@ namespace ShopApp.Shop
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(24, 29);
+            this.label1.Location = new System.Drawing.Point(24, 28);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(78, 26);
             this.label1.TabIndex = 7;
