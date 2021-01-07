@@ -13,6 +13,9 @@ namespace ShopApp.Shop
 
     public partial class Product_Sale : Form
     {
+        public static String Transportname;
+        public static String PriceTransport;
+        public static String Price;
         /// <summary>
         /// SQLDafault
         /// <para>[0] Select name and id card customer INPUT: {CUSTOMERID}</para>
@@ -328,7 +331,7 @@ namespace ShopApp.Shop
 
         public void TB_Transport_TextChanged(object sender, EventArgs e)
         {
-            
+
         }
 
         public void TB_Code_UseCode_TextChanged(object sender, EventArgs e)
@@ -338,8 +341,12 @@ namespace ShopApp.Shop
 
         private void B_Confirm_Order_Click(object sender, EventArgs e)
         {
-            Form kidmoney = new ShopApp.Shop.kidmoney();
-            kidmoney.Show();
+            if (TB_Transport.Text != "")
+            {
+                Transportname = CB_Select_Transport.Text;
+            }
+                Form kidmoney = new ShopApp.Shop.kidmoney();
+                kidmoney.Show();
         }
     }
 }

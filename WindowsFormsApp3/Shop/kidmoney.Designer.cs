@@ -86,7 +86,7 @@ namespace ShopApp.Shop
             this.B_Confirm.Location = new System.Drawing.Point(339, 152);
             this.B_Confirm.Name = "B_Confirm";
             this.B_Confirm.Size = new System.Drawing.Size(107, 34);
-            this.B_Confirm.TabIndex = 2;
+            this.B_Confirm.TabIndex = 1;
             this.B_Confirm.Text = "ยืนยันยอดที่รับ";
             this.B_Confirm.UseVisualStyleBackColor = true;
             // 
@@ -98,7 +98,7 @@ namespace ShopApp.Shop
             this.TB_ton.Name = "TB_ton";
             this.TB_ton.ReadOnly = true;
             this.TB_ton.Size = new System.Drawing.Size(142, 34);
-            this.TB_ton.TabIndex = 0;
+            this.TB_ton.TabIndex = 10;
             // 
             // label3
             // 
@@ -117,7 +117,7 @@ namespace ShopApp.Shop
             this.TB_Transport.Name = "TB_Transport";
             this.TB_Transport.ReadOnly = true;
             this.TB_Transport.Size = new System.Drawing.Size(142, 34);
-            this.TB_Transport.TabIndex = 0;
+            this.TB_Transport.TabIndex = 10;
             this.TB_Transport.TextChanged += new System.EventHandler(this.TB_Transport_TextChanged);
             // 
             // label4
@@ -137,7 +137,7 @@ namespace ShopApp.Shop
             this.TB_TransportPrice.Name = "TB_TransportPrice";
             this.TB_TransportPrice.ReadOnly = true;
             this.TB_TransportPrice.Size = new System.Drawing.Size(142, 34);
-            this.TB_TransportPrice.TabIndex = 0;
+            this.TB_TransportPrice.TabIndex = 10;
             // 
             // label5
             // 
@@ -176,6 +176,7 @@ namespace ShopApp.Shop
             this.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
             this.Name = "kidmoney";
             this.Text = "kidmoney";
+            this.Load += new System.EventHandler(this.kidmoney_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
