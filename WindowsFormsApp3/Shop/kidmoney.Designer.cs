@@ -71,6 +71,7 @@ namespace ShopApp.Shop
             this.TB_getmoney.Name = "TB_getmoney";
             this.TB_getmoney.Size = new System.Drawing.Size(142, 34);
             this.TB_getmoney.TabIndex = 0;
+            this.TB_getmoney.TextChanged += new System.EventHandler(this.TB_getmoney_TextChanged);
             // 
             // label2
             // 
@@ -89,6 +90,7 @@ namespace ShopApp.Shop
             this.B_Confirm.TabIndex = 1;
             this.B_Confirm.Text = "ยืนยันยอดที่รับ";
             this.B_Confirm.UseVisualStyleBackColor = true;
+            this.B_Confirm.Click += new System.EventHandler(this.B_Confirm_Click);
             // 
             // TB_ton
             // 

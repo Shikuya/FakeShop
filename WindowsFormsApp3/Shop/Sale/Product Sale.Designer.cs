@@ -93,6 +93,8 @@ namespace ShopApp.Shop
             this.TB_Transport.ReadOnly = true;
             this.TB_Transport.Size = new System.Drawing.Size(45, 34);
             this.TB_Transport.TabIndex = 15;
+            this.TB_Transport.Text = "0";
+            this.TB_Transport.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.TB_Transport.TextChanged += new System.EventHandler(this.TB_Transport_TextChanged);
             // 
             // label8
@@ -155,6 +157,7 @@ namespace ShopApp.Shop
             this.TB_Code_UseCode.ReadOnly = true;
             this.TB_Code_UseCode.Size = new System.Drawing.Size(130, 34);
             this.TB_Code_UseCode.TabIndex = 1;
+            this.TB_Code_UseCode.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.TB_Code_UseCode.TextChanged += new System.EventHandler(this.TB_Code_UseCode_TextChanged);
             // 
             // TB_Console_StatusCode
@@ -256,6 +259,8 @@ namespace ShopApp.Shop
             this.TB_Balance_product.ReadOnly = true;
             this.TB_Balance_product.Size = new System.Drawing.Size(87, 34);
             this.TB_Balance_product.TabIndex = 5;
+            this.TB_Balance_product.Text = "0";
+            this.TB_Balance_product.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.TB_Balance_product.TextChanged += new System.EventHandler(this.TB_name_Customer_TextChanged);
             // 
             // B_list_Product

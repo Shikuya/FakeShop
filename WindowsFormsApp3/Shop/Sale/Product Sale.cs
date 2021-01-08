@@ -14,8 +14,8 @@ namespace ShopApp.Shop
     public partial class Product_Sale : Form
     {
         public static String Transportname;
-        public static String PriceTransport;
-        public static String Price;
+        public static int PriceTransport;
+        public static int Price;
         /// <summary>
         /// SQLDafault
         /// <para>[0] Select name and id card customer INPUT: {CUSTOMERID}</para>
@@ -341,12 +341,42 @@ namespace ShopApp.Shop
 
         private void B_Confirm_Order_Click(object sender, EventArgs e)
         {
+            int dont = 0;
             if (TB_Transport.Text != "")
             {
-                Transportname = CB_Select_Transport.Text;
+                
+                Transportname =  CB_Select_Transport.Text;
+                if (TB_Transport.Text != "0")
+                {
+                    try
+                    {
+                        PriceTransport = Convert.ToInt32(TB_Transport.Text);
+                    }
+                    catch
+                    {
+                        dont = 1;
+                    }
+                    
+                }
             }
+            try
+            {
+                Price = Convert.ToInt32(TB_Balance_product.Text);
+            }
+            catch
+            {
+                dont = 1;
+            }
+            if (dont == 0)
+            {
                 Form kidmoney = new ShopApp.Shop.kidmoney();
                 kidmoney.Show();
+            }
+            else
+            {
+                MessageBox.Show("กรุณาใส่เป็นตัวเลขครับ");
+            }
+
         }
     }
 }
