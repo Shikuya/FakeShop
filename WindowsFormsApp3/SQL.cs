@@ -8,7 +8,7 @@ namespace ShopApp
 {
     class SQL
     {
-        private static System.Data.OleDb.OleDbConnection conMSSQL = new System.Data.OleDb.OleDbConnection("Provider=SQLOLEDB;Data Source=192.168.1.34;Initial Catalog=Account;User ID=aa;Password=1234;");
+        private static System.Data.OleDb.OleDbConnection conMSSQL = new System.Data.OleDb.OleDbConnection("Provider=SQLOLEDB;Data Source=192.168.1.33;Initial Catalog=Account;User ID=aa;Password=1234;");
 
         public static void LoadComboBoxInformation(String SQLCode, ComboBox cb)
         {

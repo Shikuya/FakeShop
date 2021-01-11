@@ -53,10 +53,10 @@
             this.B_Confirm_Informaion = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.CB_Select_Transport = new System.Windows.Forms.ComboBox();
-            this.TB_Price_Transport = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.TB_Price_Transport = new System.Windows.Forms.TextBox();
+            this.CB_Select_Transport = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -313,6 +313,7 @@
             this.panel1.Size = new System.Drawing.Size(804, 398);
             this.panel1.TabIndex = 6;
             this.panel1.SizeChanged += new System.EventHandler(this.panel1_SizeChanged);
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
             // 
             // groupBox4
@@ -328,23 +329,14 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Transport";
             // 
-            // CB_Select_Transport
+            // label8
             // 
-            this.CB_Select_Transport.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CB_Select_Transport.FormattingEnabled = true;
-            this.CB_Select_Transport.Location = new System.Drawing.Point(19, 50);
-            this.CB_Select_Transport.Name = "CB_Select_Transport";
-            this.CB_Select_Transport.Size = new System.Drawing.Size(98, 34);
-            this.CB_Select_Transport.TabIndex = 0;
-            this.CB_Select_Transport.SelectedIndexChanged += new System.EventHandler(this.CB_Select_Transport_SelectedIndexChanged);
-            // 
-            // TB_Price_Transport
-            // 
-            this.TB_Price_Transport.Location = new System.Drawing.Point(19, 116);
-            this.TB_Price_Transport.Name = "TB_Price_Transport";
-            this.TB_Price_Transport.ReadOnly = true;
-            this.TB_Price_Transport.Size = new System.Drawing.Size(98, 34);
-            this.TB_Price_Transport.TabIndex = 1;
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(15, 87);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(99, 26);
+            this.label8.TabIndex = 2;
+            this.label8.Text = "Price Transport";
             // 
             // label7
             // 
@@ -355,14 +347,23 @@
             this.label7.TabIndex = 2;
             this.label7.Text = "Select Transport";
             // 
-            // label8
+            // TB_Price_Transport
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(15, 87);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(99, 26);
-            this.label8.TabIndex = 2;
-            this.label8.Text = "Price Transport";
+            this.TB_Price_Transport.Location = new System.Drawing.Point(19, 116);
+            this.TB_Price_Transport.Name = "TB_Price_Transport";
+            this.TB_Price_Transport.ReadOnly = true;
+            this.TB_Price_Transport.Size = new System.Drawing.Size(98, 34);
+            this.TB_Price_Transport.TabIndex = 1;
+            // 
+            // CB_Select_Transport
+            // 
+            this.CB_Select_Transport.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CB_Select_Transport.FormattingEnabled = true;
+            this.CB_Select_Transport.Location = new System.Drawing.Point(19, 50);
+            this.CB_Select_Transport.Name = "CB_Select_Transport";
+            this.CB_Select_Transport.Size = new System.Drawing.Size(98, 34);
+            this.CB_Select_Transport.TabIndex = 0;
+            this.CB_Select_Transport.SelectedIndexChanged += new System.EventHandler(this.CB_Select_Transport_SelectedIndexChanged);
             // 
             // label9
             // 

@@ -36,11 +36,11 @@ namespace ShopApp.Shop
             this.B_Confirm = new System.Windows.Forms.Button();
             this.TB_ton = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.TB_Transport = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.TB_TransportPrice = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.TB_Transport = new System.Windows.Forms.TextBox();
+            this.TB_TransportPrice = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -111,45 +111,6 @@ namespace ShopApp.Shop
             this.label3.TabIndex = 1;
             this.label3.Text = "ทอน";
             // 
-            // TB_Transport
-            // 
-            this.TB_Transport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.TB_Transport.Location = new System.Drawing.Point(59, 52);
-            this.TB_Transport.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
-            this.TB_Transport.Name = "TB_Transport";
-            this.TB_Transport.ReadOnly = true;
-            this.TB_Transport.Size = new System.Drawing.Size(142, 34);
-            this.TB_Transport.TabIndex = 10;
-            this.TB_Transport.TextChanged += new System.EventHandler(this.TB_Transport_TextChanged);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(13, 57);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(44, 26);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "ขนส่ง";
-            // 
-            // TB_TransportPrice
-            // 
-            this.TB_TransportPrice.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.TB_TransportPrice.Location = new System.Drawing.Point(278, 52);
-            this.TB_TransportPrice.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
-            this.TB_TransportPrice.Name = "TB_TransportPrice";
-            this.TB_TransportPrice.ReadOnly = true;
-            this.TB_TransportPrice.Size = new System.Drawing.Size(142, 34);
-            this.TB_TransportPrice.TabIndex = 10;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(207, 55);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(65, 26);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "ราคาค่าส่ง";
-            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.B_Confirm);
@@ -167,6 +128,45 @@ namespace ShopApp.Shop
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(477, 307);
             this.panel1.TabIndex = 3;
+            // 
+            // TB_Transport
+            // 
+            this.TB_Transport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.TB_Transport.Location = new System.Drawing.Point(59, 52);
+            this.TB_Transport.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
+            this.TB_Transport.Name = "TB_Transport";
+            this.TB_Transport.ReadOnly = true;
+            this.TB_Transport.Size = new System.Drawing.Size(142, 34);
+            this.TB_Transport.TabIndex = 10;
+            this.TB_Transport.TextChanged += new System.EventHandler(this.TB_Transport_TextChanged);
+            // 
+            // TB_TransportPrice
+            // 
+            this.TB_TransportPrice.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.TB_TransportPrice.Location = new System.Drawing.Point(278, 52);
+            this.TB_TransportPrice.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
+            this.TB_TransportPrice.Name = "TB_TransportPrice";
+            this.TB_TransportPrice.ReadOnly = true;
+            this.TB_TransportPrice.Size = new System.Drawing.Size(142, 34);
+            this.TB_TransportPrice.TabIndex = 10;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(13, 57);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(44, 26);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "ขนส่ง";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(207, 55);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(65, 26);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "ราคาค่าส่ง";
             // 
             // kidmoney
             // 
@@ -194,10 +194,10 @@ namespace ShopApp.Shop
         private System.Windows.Forms.Button B_Confirm;
         private System.Windows.Forms.TextBox TB_ton;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox TB_Transport;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox TB_TransportPrice;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TextBox TB_Transport;
     }
 }

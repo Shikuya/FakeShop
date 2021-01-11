@@ -21,6 +21,7 @@ namespace ShopApp.Shop
         /// <para>[0] Select name and id card customer INPUT: {CUSTOMERID}</para>
         /// <para>[1] Select Event INPUT: {Eventname}</para>
         /// <para>[2] Select Product INPUT: {CodeProduct} </para>
+        /// <para>//[3] Select Quantity Product INPUT: {ProductID} </para>
         /// </summary>
         private String[] SQLDefault = new String[]
     {
@@ -40,6 +41,11 @@ namespace ShopApp.Shop
             "LEFT JOIN SHOP.dbo.tblPrice as b on a.PriceID = b.PriceID  \r\n"+
             "LEFT JOIN SHOP.dbo.tblStock as c on a.ProductID = c.ProductID \r\n"+
             "WHERE a.CodeProduct = {CodeProduct} ; \r\n\r\n",
+
+            //[3] Select Quantity Product INPUT: {ProductID}
+            "SELECT Quantity \r\n " +
+             "FROM SHOP.dbo.tblStock \r\n " +
+             "WHERE ProductID = '{ProductID}'; "
               };
 
         int ProductCurrentSelectIndex = -1;
@@ -101,7 +107,7 @@ namespace ShopApp.Shop
                 ConsoleCode(TB_Code_UseCode.Text, "Not Found", "0");
             }
             else
-            {
+            {// เจอบัค
                 if (!((Convert.ToInt32(dt.Rows[0][1]) == 0))) //Chaeck Status 0 = true 1 = false
                 {
                     ConsoleCode(dt.Rows[0][0] + "", "expire", "0");
@@ -246,11 +252,17 @@ namespace ShopApp.Shop
 
         private void DGV_Product_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
+            //String ProductID = DGV_Product.Rows[1].Cells[4].Value.ToString; //แก้ให้มันได้
+            //DataTable dt =  SQL.InputSQLMSSQL(SQLDefault[3].Replace("{ProductID}" ,));
             for (int a = 0; a < DGV_Product.Rows.Count; a++)
             {
                 if (Convert.ToInt32(DGV_Product.Rows[a].Cells[2].Value.ToString()) < 1)
                 {
                     DGV_Product.Rows[a].Cells[2].Value = 1;
+                }
+                else if(Convert.ToInt32(DGV_Product.Rows[a].Cells[2].Value.ToString()) > 10)
+                {
+
                 }
                 DGV_Product.Rows[a].Cells[3].Value = Convert.ToInt32(DGV_Product.Rows[a].Cells[5].Value) * Convert.ToInt32(DGV_Product.Rows[a].Cells[2].Value.ToString());
                 Balance();

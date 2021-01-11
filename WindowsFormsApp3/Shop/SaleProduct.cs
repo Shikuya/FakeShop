@@ -234,5 +234,10 @@ namespace ShopApp.Shop
         {
             TB_Price_Transport.ReadOnly = false;
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

@@ -12,6 +12,32 @@ namespace ShopApp.Shop
 {
     public partial class kidmoney : Form
     {
+        /// <summary> 
+        /// SQLDafault 
+        /// <para>[0] OrderProduct INPUT: {CustomerID} {ProductID} {Quantity} {EventSale} {PriceProduct} {PriceTransport} {TransportID} {CodeProduct}</para> 
+        /// </summary> 
+        private String[] SQLDefault = new String[]
+         { 
+            //[0] OrderProduct INPUT: {CustomerID} {ProductID} {Quantity} {EventSale} {PriceProduct} {PriceTransport} {TransportID} {CodeProduct}
+            "DECLARE @Productid INT; \r\n " +
+             "DECLARE @Stock INT; \r\n " +
+
+             "SELECT @Productid = (SELECT ProductID \r\n " +
+             "FROM SHOP.dbo.tblProducts \r\n " +
+             "WHERE CodeProduct = '{CodeProduct}'); \r\n " +
+
+             "SELECT @Stock = (SELECT Quantity \r\n " +
+             "FROM SHOP.dbo.tblStock \r\n " +
+             "WHERE ProductID= @Productid); \r\n " +
+
+             "INSERT INTO SHOP.dbo.tblOrderProducts(CustomerID,ProductID,Quantity,EventSaleID,PriceProduct,PriceTransport,TransportID) \r\n " +
+             "VALUES ('{CustomerID}',@Productid,'{Quantity}','{EventSale}','{PriceProduct}','{PriceTransport}','{TransportID}'); \r\n " +
+          
+             "UPDATE SHOP.dbo.tblStock \r\n " +
+             "SET Quantity = @Stock - '{Quantity}' \r\n " +
+             "WHERE ProductID = @Productid; \r\n ", 
+
+         };
         public kidmoney()
         {
             InitializeComponent();
@@ -54,12 +80,13 @@ namespace ShopApp.Shop
 
         private void kidmoney_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void B_Confirm_Click(object sender, EventArgs e)
         {
-
+            DataTable dt = SQL.InputSQLMSSQL(SQLDefault[0].Replace("{CustomerID}", ShopApp.Shop.SelectCustomer.ReturnID)
+                .Replace("ProductID", ""));
         }
 
         private void TB_getmoney_TextChanged(object sender, EventArgs e)
