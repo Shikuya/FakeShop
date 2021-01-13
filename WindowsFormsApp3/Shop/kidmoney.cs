@@ -64,13 +64,15 @@ namespace ShopApp.Shop
             }
             try
             {
-                TB_Balance.Text = (Convert.ToInt32(price) + Convert.ToInt32(Tprice))+"";
+                TB_PriceProduct.Text = price;
+                TB_DisCount.Text = ShopApp.Shop.Product_Sale.Discount;
+                TB_Balance.Text = ((Convert.ToInt32(price) -(Convert.ToInt32(price) * Convert.ToInt32(TB_DisCount.Text) / 100)) + Convert.ToInt32(Tprice))+"";
             }
             catch
             {
                 Console.WriteLine("");
             }
-            
+
         }
 
         private void TB_Transport_TextChanged(object sender, EventArgs e)
@@ -95,13 +97,34 @@ namespace ShopApp.Shop
             String get = TB_getmoney.Text;
             try
             {
-                int a = (Convert.ToInt32(yod) - Convert.ToInt32(get));
-                TB_ton.Text = a+"";
+                if (TB_getmoney.Text != "")
+                {
+                    if(Convert.ToInt32(TB_getmoney.Text) > Convert.ToInt32(yod))
+                    {
+                        int a = (Convert.ToInt32(get) - Convert.ToInt32(yod));
+                        TB_ton.Text = a+"";
+                    }
+                    else
+                    {
+                        TB_ton.Text = "0";
+                    }
+
+                }
+                else
+                {
+                    TB_ton.Text = "0";
+                }
+
             }
             catch
             {
                 Console.WriteLine("");
             }
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
 
         }
     }

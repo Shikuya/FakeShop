@@ -16,6 +16,7 @@ namespace ShopApp.Shop
         public static String Transportname;
         public static int PriceTransport;
         public static int Price;
+        public static String Discount;
         /// <summary>
         /// SQLDafault
         /// <para>[0] Select name and id card customer INPUT: {CUSTOMERID}</para>
@@ -107,16 +108,30 @@ namespace ShopApp.Shop
                 ConsoleCode(TB_Code_UseCode.Text, "Not Found", "0");
             }
             else
-            {// เจอบัค
-                if (!((Convert.ToInt32(dt.Rows[0][1]) == 0))) //Chaeck Status 0 = true 1 = false
+            {
+                try
                 {
-                    ConsoleCode(dt.Rows[0][0] + "", "expire", "0");
+                    if (!((Convert.ToInt32(dt.Rows[0][1]) == 0))) //Chaeck Status 0 = ทำงานได้ 1 = หมดอายุ
+                    {
+                        ConsoleCode(dt.Rows[0][0] + "", "expire", "0");
+                    }
+                    else
+                    {
+                        ConsoleCode(dt.Rows[0][0] + "", "Activate", dt.Rows[0][2] + "");
+                    }
                 }
-                else
+                catch
                 {
-                    ConsoleCode(dt.Rows[0][0] + "", "Activate", dt.Rows[0][2] + "");
+                    ConsoleCode(TB_Code_UseCode.Text, "Error", "0");
                 }
-
+            }
+            if (dt.Rows[0][2] != "")
+            {
+                Discount = ""+dt.Rows[0][2];
+            }
+            else
+            {
+                Discount = "";
             }
         }
 
