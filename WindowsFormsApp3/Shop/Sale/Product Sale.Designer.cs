@@ -275,6 +275,7 @@ namespace ShopApp.Shop
             // 
             // DGV_Product
             // 
+            this.DGV_Product.AccessibleRole = System.Windows.Forms.AccessibleRole.Application;
             this.DGV_Product.AllowUserToAddRows = false;
             this.DGV_Product.AllowUserToDeleteRows = false;
             this.DGV_Product.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -443,7 +444,6 @@ namespace ShopApp.Shop
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button B_AddProduct;
         private System.Windows.Forms.Button B_list_Product;
-        private System.Windows.Forms.DataGridView DGV_Product;
         private System.Windows.Forms.TextBox TB_Select_Product;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label2;
@@ -464,5 +464,6 @@ namespace ShopApp.Shop
         private System.Windows.Forms.ComboBox CB_Select_Transport;
         private System.Windows.Forms.TextBox TB_Price_Transport;
         private System.Windows.Forms.TextBox TB_Transport;
+        public System.Windows.Forms.DataGridView DGV_Product;
     }
 }

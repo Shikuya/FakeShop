@@ -16,7 +16,11 @@ namespace ShopApp.Shop
         public static String Transportname;
         public static int PriceTransport;
         public static int Price;
+        public static String TransportID;
         public static String Discount;
+        public static List<int> IDPrductDGV = new List<int>();
+        public static List<int> QuantityDGV = new List<int>();
+        public static String CodeEvent;
         /// <summary>
         /// SQLDafault
         /// <para>[0] Select name and id card customer INPUT: {CUSTOMERID}</para>
@@ -128,10 +132,12 @@ namespace ShopApp.Shop
             if (dt.Rows[0][2] != "")
             {
                 Discount = ""+dt.Rows[0][2];
+                CodeEvent = "" + dt.Rows[0][3];
             }
             else
             {
-                Discount = "";
+                Discount = "0";
+                CodeEvent = "0";
             }
         }
 
@@ -349,6 +355,8 @@ namespace ShopApp.Shop
         public void CB_Select_Transport_SelectedIndexChanged(object sender, EventArgs e)
         {
             TB_Transport.ReadOnly = false;
+            ShopApp.Class.ComboBoxItem tran = (CB_Select_Transport.SelectedItem as ShopApp.Class.ComboBoxItem);
+            TransportID = tran.No;
         }
 
         private void label8_Click(object sender, EventArgs e)
@@ -396,6 +404,14 @@ namespace ShopApp.Shop
             }
             if (dont == 0)
             {
+                for(int a = 0; a < DGV_Product.Rows.Count; a++)
+                {
+                    IDPrductDGV.Add(Convert.ToInt32(DGV_Product.Rows[a].Cells[4].Value));
+                }
+                for(int a = 0; a < DGV_Product.Rows.Count; a++)
+                {
+                    QuantityDGV.Add(Convert.ToInt32(DGV_Product.Rows[a].Cells[2].Value));
+                }
                 Form kidmoney = new ShopApp.Shop.kidmoney();
                 kidmoney.Show();
             }

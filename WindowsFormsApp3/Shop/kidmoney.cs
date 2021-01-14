@@ -14,29 +14,31 @@ namespace ShopApp.Shop
     {
         /// <summary> 
         /// SQLDafault 
-        /// <para>[0] OrderProduct INPUT: {CustomerID} {ProductID} {Quantity} {EventSale} {PriceProduct} {PriceTransport} {TransportID} {CodeProduct}</para> 
+        /// <para>[0]INSERT ORDER 1/2 INPUT: {Customer} {Event} {PriceOrder} {PriceTransport} {TransportID} </para> 
+        /// <para>[1]INSERT ORDER 2/2 INPUT: {Quantity} {OrderID} {ProductID} </para>
         /// </summary> 
         private String[] SQLDefault = new String[]
          { 
-            //[0] OrderProduct INPUT: {CustomerID} {ProductID} {Quantity} {EventSale} {PriceProduct} {PriceTransport} {TransportID} {CodeProduct}
-            "DECLARE @Productid INT; \r\n " +
+             //[0]INSERT ORDER 1/2 INPUT: 
+            "DECLARE @OrderID INT; \r\n " +
+             "INSERT INTO SHOP.dbo.tblOrderProducts (CustomerID,EventSaleID , PriceOrder , PriceTransport , TransportID) \r\n " +
+             "VALUES('{Customer}','{Event}','{PriceOrder}','{PriceTransport}','{TransportID}'); \r\n " +
+             "SELECT @OrderID = SCOPE_IDENTITY(); \r\n " +
+             "SELECT @OrderID ;",
+
+            //[1]INSERT ORDER 2/2 INPUT: {Quantity} {OrderID} {ProductID} 
              "DECLARE @Stock INT; \r\n " +
-
-             "SELECT @Productid = (SELECT ProductID \r\n " +
-             "FROM SHOP.dbo.tblProducts \r\n " +
-             "WHERE CodeProduct = '{CodeProduct}'); \r\n " +
-
+             " \r\n " +
              "SELECT @Stock = (SELECT Quantity \r\n " +
              "FROM SHOP.dbo.tblStock \r\n " +
-             "WHERE ProductID= @Productid); \r\n " +
-
-             "INSERT INTO SHOP.dbo.tblOrderProducts(CustomerID,ProductID,Quantity,EventSaleID,PriceProduct,PriceTransport,TransportID) \r\n " +
-             "VALUES ('{CustomerID}',@Productid,'{Quantity}','{EventSale}','{PriceProduct}','{PriceTransport}','{TransportID}'); \r\n " +
-          
-             "UPDATE SHOP.dbo.tblStock \r\n " +
+             "WHERE ProductID= {ProductID}); \r\n " +
+             " \r\n " +
+             " UPDATE SHOP.dbo.tblStock \r\n " +
              "SET Quantity = @Stock - '{Quantity}' \r\n " +
-             "WHERE ProductID = @Productid; \r\n ", 
-
+             "WHERE ProductID = {ProductID};  \r\n " +
+             " \r\n " +
+             "INSERT INTO SHOP.dbo.tblOrderDetail(OrderID , ProductID , Quantity) \r\n " +
+             "VALUES ('{OrderID}','{ProductID}','{Quantity}'); "
          };
         public kidmoney()
         {
@@ -66,6 +68,10 @@ namespace ShopApp.Shop
             {
                 TB_PriceProduct.Text = price;
                 TB_DisCount.Text = ShopApp.Shop.Product_Sale.Discount;
+                if(TB_DisCount.Text == "")
+                {
+                    TB_DisCount.Text = "0";
+                }
                 TB_Balance.Text = ((Convert.ToInt32(price) -(Convert.ToInt32(price) * Convert.ToInt32(TB_DisCount.Text) / 100)) + Convert.ToInt32(Tprice))+"";
             }
             catch
@@ -85,10 +91,26 @@ namespace ShopApp.Shop
             
         }
 
-        private void B_Confirm_Click(object sender, EventArgs e)
+        private void B_Confirm_Click(object sender, EventArgs e) //กดปุ่ม
         {
-            DataTable dt = SQL.InputSQLMSSQL(SQLDefault[0].Replace("{CustomerID}", ShopApp.Shop.SelectCustomer.ReturnID)
-                .Replace("ProductID", ""));
+            if (Convert.ToString(ShopApp.Shop.Product_Sale.TransportID) == "")
+            {
+                ShopApp.Shop.Product_Sale.TransportID = "0";
+            }
+            //if(ShopApp.Shop.Product_Sale.)
+            DataTable dt = SQL.InputSQLMSSQL(SQLDefault[0].Replace("{Customer}", ShopApp.Shop.SelectCustomer.ReturnID)
+                .Replace("{Event}", ShopApp.Shop.Product_Sale.Discount)
+                .Replace("{PriceOrder}",""+ShopApp.Shop.Product_Sale.Price)
+                .Replace("{PriceTransport}",""+ShopApp.Shop.Product_Sale.PriceTransport)
+                .Replace("{TransportID}",ShopApp.Shop.Product_Sale.TransportID));
+
+            for (int a = 0; a < ShopApp.Shop.Product_Sale.IDPrductDGV.Count; a++)
+            {//เพิมเติม Detail ใช้ไม่ได้
+                SQL.InputSQLMSSQL(SQLDefault[1].Replace("{Quantity}", "" + ShopApp.Shop.Product_Sale.QuantityDGV)
+                    .Replace("{OrderID}" , ""+dt.Rows[0][0])
+                    .Replace("ProductID" , ""+ShopApp.Shop.Product_Sale.IDPrductDGV));
+            }
+            MessageBox.Show("a");
         }
 
         private void TB_getmoney_TextChanged(object sender, EventArgs e)
